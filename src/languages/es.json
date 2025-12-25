@@ -1,0 +1,27 @@
+{
+  "global": {
+    "name": "Adan Gonzalez Ceseña",
+    "profession": "Ingeniero de Software"
+  },
+  "header": {
+    "home": "Inicio",
+    "skills": "Habilidades",
+    "aboutMe": "Sobre mí"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "description": "Durante mis 3 años en la universidad y por mi cuenta, he aprendido a usar estos lenguajes, frameworks y librerías."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "code": "Código",
+    "goTo": "Ver"
+  },
+  "experience": {
+    "title": "Experiencia"
+  },
+  "aboutMe": {
+    "title":"Sobre Mi",
+    "description": ""
+  }
+}

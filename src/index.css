@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: "Schoolbell", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  --bg-color: #1F1F1F;
+  --text-color: #fff;
+}
+
+.light {
+  --bg-color: #f2f2f2;
+  --text-color: #000;
+}
+
+@theme {
+  --color-c-bg: var(--bg-color);
+  --color-c-text: var(--text-color);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+html{
+  font-size: 16px;
+  
+  @media(min-width:1024px){
+    font-size: 22px;
+  }
+}
