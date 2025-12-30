@@ -7,16 +7,19 @@
 
   --bg-color: #1F1F1F;
   --text-color: #fff;
+  --inverted-color: #000;
 }
 
 .light {
   --bg-color: #f2f2f2;
   --text-color: #000;
+  --inverted-color: #fff;
 }
 
 @theme {
   --color-c-bg: var(--bg-color);
   --color-c-text: var(--text-color);
+  --color-c-inverted: var(--inverted-color);
 }
 
 body {
@@ -26,10 +29,10 @@ body {
   overflow-x: hidden;
 }
 
-html{
+html {
   font-size: 16px;
-  
-  @media(min-width:1024px){
+
+  @media(min-width:1024px) {
     font-size: 22px;
   }
 }

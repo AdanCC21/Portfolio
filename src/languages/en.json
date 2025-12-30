@@ -14,6 +14,23 @@
   },
   "projects": {
     "title": "Projects",
+    "projectslist": [
+      {
+        "title": "Act One",
+        "description": "A social network designed to share stories and gossip, where users can tell their anecdotes in a format divided by acts. The platform also includes a 'focus mode' intended for content creators, which allows reading stories paragraph by paragraph, eliminating distractions for a more immersive experience.",
+        "myRol":"I carried out the entire project, from the idea, planning, design, backend, frontend, and database."
+      },
+      {
+        "title": "Gestion De Pruebas",
+        "description": "",
+        "myRol":""
+      },
+      {
+        "title": "Wolf Forest",
+        "description": "It is a website where you can update your fictional characters to face off in a battle royale. Over several days and nights, special events such as deaths, murders, temporary alliances, and item collection take place, creating a dynamic and surprise-filled narrative.",
+        "myRol":"I carried out this entire project, developing it during vacations to learn JavaScript."
+      }
+    ],
     "code": "Code",
     "goTo": "View"
   },
@@ -21,7 +38,7 @@
     "title": "Experience"
   },
   "aboutMe": {
-    "title":"About Me",
+    "title": "About Me",
     "description": ""
   }
 }

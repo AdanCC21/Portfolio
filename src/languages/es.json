@@ -14,6 +14,23 @@
   },
   "projects": {
     "title": "Proyectos",
+     "projectslist": [
+      {
+        "title": "Act One",
+        "description": "Una red social diseñada para compartir historias y chismes, donde los usuarios pueden compartir sus anécdotas en un formato dividido por actos. La plataforma también incluye un modo de concentración para creadores de contenido, que permite leer las historias párrafo por párrafo, eliminando distracciones y ofreciendo una experiencia más inmersiva.",
+        "myRol":"Realicé todo el proyecto, desde la idea, planificación, diseño, backend, frontend y base de datos."
+      },
+      {
+        "title": "Gestion De Pruebas",
+        "description": "",
+        "myRol":""
+      },
+      {
+        "title": "Wolf Forest",
+        "description": "Es un sitio web donde puedes mejorar tus personajes ficticios para enfrentarlos en una batalla campal. A lo largo de varios días y noches, se producen eventos especiales como muertes, asesinatos, alianzas temporales y recolección de objetos, creando una narrativa dinámica y llena de sorpresas.",
+        "myRol":"Realicé todo este proyecto, lo desarrollé durante las vacaciones para aprender JavaScript."
+      }
+    ],
     "code": "Código",
     "goTo": "Ver"
   },

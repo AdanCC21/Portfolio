@@ -15,6 +15,7 @@ import Mongo from '@/assets/icons/skills/mongodb.svg'
 import Html from '@/assets/icons/skills/html.svg'
 import Css from '@/assets/icons/skills/css.svg'
 import Tailwindcss from '@/assets/icons/skills/tailwindcss.svg'
+import SkillItem from "@/components/SkillItem"
 
 export default function Skills() {
     const { t } = useLanguage();
@@ -24,46 +25,20 @@ export default function Skills() {
             <h2 className="text-4xl font-semibold mb-2">{t.skills.title}</h2>
             <span className="text-base font-normal mb-4">{t.skills.description}</span>
             <ul className="flex flex-wrap gap-4">
-                <SkillItem src={React} alt="React" name="React" skillLevel="avarage" />
-                <SkillItem src={Vue} alt="Vue" name="Vue" skillLevel="low" />
-                <SkillItem src={Tailwindcss} alt="Tailwindcss" name="Tailwindcss" skillLevel="avarage" />
-                <SkillItem src={NestJs} alt="NestJs" name="NestJs" skillLevel="avarage" />
-                
-                <SkillItem src={Prisma} alt="Prisma" name="Prisma" skillLevel="avarage" />
-                <SkillItem src={Mongo} alt="Mongo DB" name="Mongo DB" skillLevel="low" />
-                
-                <SkillItem src={Js} alt="JavaScript" name="JavaScript" skillLevel="high" />
-                <SkillItem src={Ts} alt="TypeScript" name="TypeScript" skillLevel="high" />
-                
-                <SkillItem src={C} alt="C" name="C" skillLevel="avarage" />
-                <SkillItem src={Cpp} alt="Cpp" name="C++" skillLevel="avarage" />
-                <SkillItem src={Py} alt="Python" name="Python" skillLevel="low" />
-
-                <SkillItem src={Html} alt="HTML" name="HTML" skillLevel="avarage" />
-                <SkillItem src={Css} alt="Css" name="CSS" skillLevel="avarage" />
+                <SkillItem showSkillLevel item={{ image: { src: React, alt: 'React' }, name: "React", skillLevel: "avarage" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Vue, alt: 'Vue' }, name: "Vue", skillLevel: "low" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Tailwindcss, alt: 'tailwindcss' }, name: "Tailwindcss", skillLevel: "avarage" }} />
+                <SkillItem showSkillLevel item={{ image: { src: NestJs, alt: 'NestJs' }, name: "NestJs", skillLevel: "avarage" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Prisma, alt: 'Prisma' }, name: "Prisma", skillLevel: "avarage" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Mongo, alt: 'Mongo' }, name: "Mongo", skillLevel: "low" }} />      
+                <SkillItem showSkillLevel item={{ image: { src: Js, alt: 'JavaScript' }, name: "JavaScript", skillLevel: "high" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Ts, alt: 'TypeScript' }, name: "TypeScript", skillLevel: "high" }} />
+                <SkillItem showSkillLevel item={{ image: { src: C, alt: 'C' }, name: "C", skillLevel: "avarage" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Cpp, alt: 'C++' }, name: "C++", skillLevel: "avarage" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Py, alt: 'Python' }, name: "Python", skillLevel: "low" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Html, alt: 'HTML' }, name: "HTML", skillLevel: "avarage" }} />
+                <SkillItem showSkillLevel item={{ image: { src: Css, alt: 'Css' }, name: "Css", skillLevel: "avarage" }} />
             </ul>
         </section>
     )
 }
-
-interface SkillItemPropmts {
-    src: string
-    alt: string
-    name: string
-    skillLevel: SkillLevel
-}
-
-type SkillLevel = 'high' | 'avarage' | 'low';
-
-function SkillItem({ src, alt, name, skillLevel }: SkillItemPropmts) {
-    return (
-        <li className="flex flex-col gap-4 h-18 w-18">
-            <img src={src} alt={alt} className="h-6/10" />
-            <div className="flex flex-col items-center text-center h-4/10">
-                <span className="text-lg font-medium">{name}</span>
-                <span className="text-xs text-[#888] font-regular">Skill level : {skillLevel}</span>
-            </div>
-        </li>
-    )
-}
- 

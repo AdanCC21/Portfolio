@@ -1,5 +1,4 @@
 import { useLanguage } from '@/hooks/useLanguage'
-import React from 'react'
 
 export default function About() {
     const { t } = useLanguage();
