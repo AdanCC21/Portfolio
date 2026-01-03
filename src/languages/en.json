@@ -18,24 +18,53 @@
       {
         "title": "Act One",
         "description": "A social network designed to share stories and gossip, where users can tell their anecdotes in a format divided by acts. The platform also includes a 'focus mode' intended for content creators, which allows reading stories paragraph by paragraph, eliminating distractions for a more immersive experience.",
-        "myRol":"I carried out the entire project, from the idea, planning, design, backend, frontend, and database."
+        "myRol": "I carried out the entire project, from the idea, planning, design, backend, frontend, and database."
       },
       {
         "title": "Gestion De Pruebas",
         "description": "",
-        "myRol":""
+        "myRol": ""
       },
       {
         "title": "Wolf Forest",
         "description": "It is a website where you can update your fictional characters to face off in a battle royale. Over several days and nights, special events such as deaths, murders, temporary alliances, and item collection take place, creating a dynamic and surprise-filled narrative.",
-        "myRol":"I carried out this entire project, developing it during vacations to learn JavaScript."
+        "myRol": "I carried out this entire project, developing it during vacations to learn JavaScript."
       }
     ],
     "code": "Code",
     "goTo": "View"
   },
   "experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "experiencesList": [
+      {
+        "title": "TalentLand",
+        "date": {
+          "day": 21,
+          "month": 3,
+          "year": 2025
+        },
+        "description": "In 2025, along with a group of friends from university, we went to the Hackathon at Expo Guadalajara 2025. \n There were several tracks within this hackathon, and we chose the McDonald's track. McDonald's wanted an app that would make the food-buying experience unforgettable. \n\n Our idea was to present an app more focused on accessibility, with a bot that guides you through the entire application and offers options to manage the app based on the user's disabilities (deaf, blind, motor impairment). Unfortunately, we didn't make it to the finals, but we were among the 500 people selected from 1,500 applicants."
+      },
+      {
+        "title": "Nasa APP Space Challenge",
+        "date": {
+          "day": 4,
+          "month": 9,
+          "year": 2025
+        },
+        "description": "On October 4th and 5th, 2025, my team and I participated in an event organized by NASA, where participants were challenged to develop an application based on different prompts available on their platform. \n\nWe chose the weather app challenge, which focused on providing recommendations or warnings based on the user’s daily plans and current weather conditions. For example, if a user plans an outdoor event, the application may suggest moving it to a covered location in case of heavy rain or strong winds. \n\n Although we did not place due to our limited experience in mobile development, the experience was highly enriching, and some classmates from my group advanced to the national stage."
+      },
+      {
+        "title": "Becario",
+        "date": {
+          "day": 29,
+          "month": 8,
+          "year": 2025
+        },
+        "description": "I carried out the design of a ticket management system for tracking tasks within a department. The project included the design of the database infrastructure, covering the selection of the database manager, table normalization, and the creation of relationships between tables.\n\n Additionally, I designed the application interface using the University’s institutional colors and user experience (UX) principles. I developed the frontend with a responsive approach to ensure compatibility across multiple devices, as well as the backend responsible for database consumption and communication with the frontend.\n\n The project was developed using tools and technologies such as React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak."
+      }
+    ]
   },
   "aboutMe": {
     "title": "About Me",

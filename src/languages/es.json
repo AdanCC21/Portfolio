@@ -14,31 +14,60 @@
   },
   "projects": {
     "title": "Proyectos",
-     "projectslist": [
+    "projectslist": [
       {
         "title": "Act One",
         "description": "Una red social diseñada para compartir historias y chismes, donde los usuarios pueden compartir sus anécdotas en un formato dividido por actos. La plataforma también incluye un modo de concentración para creadores de contenido, que permite leer las historias párrafo por párrafo, eliminando distracciones y ofreciendo una experiencia más inmersiva.",
-        "myRol":"Realicé todo el proyecto, desde la idea, planificación, diseño, backend, frontend y base de datos."
+        "myRol": "Realicé todo el proyecto, desde la idea, planificación, diseño, backend, frontend y base de datos."
       },
       {
         "title": "Gestion De Pruebas",
         "description": "",
-        "myRol":""
+        "myRol": ""
       },
       {
         "title": "Wolf Forest",
         "description": "Es un sitio web donde puedes mejorar tus personajes ficticios para enfrentarlos en una batalla campal. A lo largo de varios días y noches, se producen eventos especiales como muertes, asesinatos, alianzas temporales y recolección de objetos, creando una narrativa dinámica y llena de sorpresas.",
-        "myRol":"Realicé todo este proyecto, lo desarrollé durante las vacaciones para aprender JavaScript."
+        "myRol": "Realicé todo este proyecto, lo desarrollé durante las vacaciones para aprender JavaScript."
       }
     ],
     "code": "Código",
     "goTo": "Ver"
   },
   "experience": {
-    "title": "Experiencia"
+    "title": "Experiencia",
+    "experiencesList": [
+      {
+        "title": "TalentLand",
+        "date": {
+          "day": 21,
+          "month": 3,
+          "year": 2025
+        },
+        "description": "En 2025, junto a un grupo de amigos de la universidad, fuimos al Hackathon de la Expo Guadalajara 2025, dentro de este hackathon hubo varios tracks, nosotros fuimos por el track de McDonald's. \n\n Lo que quería McDonald’s era una aplicación que haga inolvidable la experiencia de comprar comida. Nuestra idea era presentar una aplicación más orientada a la accesibilidad, con un bot que te guíe por toda la aplicación y que está misma presente opciones para manejar la app según las discapacidades que el usuario cuente (sordo, ciego, motriz). \n\n Lamentablemente no pasamos a finales, pero sí fuimos parte de las 500 personas que fueron seleccionadas de los 1500 solicitantes."
+      },
+      {
+        "title": "Nasa APP Space Challenge",
+        "date": {
+          "day": 4,
+          "month": 9,
+          "year": 2025
+        },
+        "description": "El 4 y 5 de octubre de 2025, mi equipo y yo participamos en un evento organizado por la NASA, en el que se propone desarrollar una aplicación a partir de distintos retos disponibles en su plataforma. \n\n Elegimos el reto de una aplicación del clima que, a partir de los planes del usuario, ofrece recomendaciones o advertencias según las condiciones meteorológicas. Por ejemplo, si el usuario planea un evento al aire libre, la aplicación puede sugerir cambiar a un lugar techado en caso de lluvias o vientos fuertes. \n\nAunque no obtuvimos un lugar ganador debido a nuestra limitada experiencia en desarrollo móvil, la experiencia fue muy enriquecedora y algunos compañeros de mi salón lograron avanzar a la etapa nacional."
+      },
+      {
+        "title": "Becario",
+        "date": {
+          "day": 29,
+          "month": 8,
+          "year": 2025
+        },
+        "description": "Llevé a cabo el diseño de un sistema gestor de tickets para el seguimiento de tareas dentro de un departamento. El proyecto incluyó el diseño de la infraestructura de base de datos, abarcando la selección del gestor, la normalización de tablas y la creación de relaciones entre ellas.\n\n Además, diseñé la interfaz de la aplicación utilizando los colores institucionales de la Universidad y principios de experiencia de usuario (UX). Desarrollé el frontend con un enfoque responsive para asegurar su correcto funcionamiento en múltiples dispositivos, así como el backend encargado de la comunicación con la base de datos y el frontend.\n\n Para el desarrollo del proyecto utilicé herramientas y tecnologías como React + Vite, NestJS, Prisma, Figma, Lucidchart y Keycloak."
+      }
+    ]
   },
   "aboutMe": {
-    "title":"Sobre Mi",
+    "title": "Sobre Mi",
     "description": ""
   }
 }
