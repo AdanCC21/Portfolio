@@ -25,8 +25,8 @@ export default function Experience() {
         <ul className='relative flex flex-col w-1/3'>
           {expList.map((current, index) => (
             <li className='flex group w-fit cursor-pointer ' onClick={() => { setExpIndx(index) }}>
-              <div className='relative bg-white h-12 w-px group-hover:h-22 transition-all ease-in-out duration-150'>
-                <div className='bg-white size-3 absolute left-0 top-0 -translate-x-1/2 rounded-full'></div>
+              <div className='relative bg-c-inverted h-12 w-px group-hover:h-22 transition-all ease-in-out duration-150'>
+                <div className='bg-c-inverted size-3 absolute left-0 top-0 -translate-x-1/2 rounded-full'></div>
               </div>
               <div className='flex flex-col ml-2'>
                 <span className='text-base'>{current.title}</span>

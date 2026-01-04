@@ -7,19 +7,22 @@
 
   --bg-color: #1F1F1F;
   --text-color: #fff;
-  --inverted-color: #000;
+  --inverted-color: #fff;
+  --text-inverted: #000;
 }
 
 .light {
   --bg-color: #f2f2f2;
   --text-color: #000;
-  --inverted-color: #fff;
+  --inverted-color: #000;
+  --text-inverted: #fff;
 }
 
 @theme {
   --color-c-bg: var(--bg-color);
   --color-c-text: var(--text-color);
   --color-c-inverted: var(--inverted-color);
+  --color-c-text-inverted: var(--text-inverted);
 }
 
 body {

@@ -11,7 +11,7 @@ interface Prompts {
 }
 export default function ImageModal({ state, setState, images, currentIntex = 0 }: Prompts) {
     const [currentImage, setImage] = useState(currentIntex);
-    
+
     useEffect(() => {
         if (state) {
             document.documentElement.style.overflowY = "hidden";
@@ -20,7 +20,7 @@ export default function ImageModal({ state, setState, images, currentIntex = 0 }
         }
     }, [state])
 
-    useEffect(()=>{setImage(currentIntex | 0)},[images])
+    useEffect(() => { setImage(currentIntex | 0) }, [images])
 
     const handleMove = (moveRight: boolean) => {
         if (currentImage === images.length - 1 && moveRight) {
@@ -37,20 +37,20 @@ export default function ImageModal({ state, setState, images, currentIntex = 0 }
     return (
         <>
             {state &&
-                <div className="fixed top-0 left-0 flex justify-between w-screen h-screen bg-black/20 px-[5%] backdrop-blur-sm">
-                    <button className="absolute right-12 top-6 cursor-pointer" onClick={() => { setState(false) }}>
-                        <span>X</span>
+                <div className="fixed top-0 left-0 flex justify-between w-screen h-screen bg-black/60 px-[5%] backdrop-blur-sm">
+                    <button className="absolute right-12 top-6 cursor-pointer p-2 group hover:bg-c-inverted rounded-lg" onClick={() => { setState(false) }}>
+                        <span className="text-xl group-hover:text-c-text-inverted">X</span>
                     </button>
-                    <button className="cursor-pointer" onClick={()=>{handleMove(false)}}>
-                        <span>{"<"}</span>
+                    <button className="w-fit h-fit my-auto cursor-pointer p-2 group hover:bg-c-inverted rounded-lg" onClick={() => { handleMove(false) }}>
+                        <span className="group-hover:text-c-text-inverted text-2xl">{"<"}</span>
                     </button>
 
-                    <main className="flex w-9/10">
-                        <img className="m-auto" src={images[currentImage]} />
+                    <main className="flex justify-center items-center w-9/10 h-full p-4">
+                        <img className="max-w-8/10 max-h-8/10 rounded-lg shadow-sm" src={images[currentImage]} />
                     </main>
 
-                    <button className="cursor-pointer" onClick={()=>{handleMove(true)}}>
-                        {">"}
+                    <button className="w-fit h-fit my-auto cursor-pointer p-2 group hover:bg-c-inverted rounded-lg" onClick={() => { handleMove(true) }}>
+                        <span className="group-hover:text-c-text-inverted text-2xl">{">"}</span>
                     </button>
                 </div>
             }

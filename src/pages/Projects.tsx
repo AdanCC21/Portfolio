@@ -22,12 +22,12 @@ export default function Projects() {
         <section className="flex flex-col min-h-screen py-[5%]">
 
             <h3 className="text-4xl font-bold mb-4">{t.projects.title}</h3>
-            <ul className="flex flex-row w-full h-8 items-end border-b-2 border-white mb-4">
+            <ul className="flex flex-row w-full h-8 items-end border-b-2 border-c-inverted mb-4">
                 {projects.map((current) => (
-                    <li key={current.title} className={`${current.title === currentProject.title ? 'h-full bg-[#111]' : 'h-8/10 bg-[#555]'} 
+                    <li key={current.title} className={`${current.title === currentProject.title ? 'h-full bg-c-inverted' : 'h-8/10 bg-[#888]'} 
                     flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl`}
                         onClick={() => { setCurrentProject(current) }}>
-                        <span className=" text-base font-noraml">{current.title}</span>
+                        <span className={`${current.title === currentProject.title ? 'font-bold':'opacity-60'} text-c-text-inverted text-base font-noraml`}>{current.title}</span>
                     </li>
                 ))}
             </ul>
