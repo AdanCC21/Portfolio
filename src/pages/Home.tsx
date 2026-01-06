@@ -4,7 +4,7 @@ export default function Home() {
   const { t } = useLanguage();
   return (
     <section className='flex w-screen h-screen items-center justify-center'>
-      <div className="flex flex-row w-8/10 h-6/10">
+      <div className="flex flex-row w-full h-6/10">
         <img src='/draw.png' />
         <div className="flex flex-col gap-y-4 justify-center">
           <h2 className="text-6xl">{t.global.name}</h2>

@@ -8,7 +8,7 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className='fixed flex items-center justify-between h-[6vh] w-full px-[4%] backdrop-blur-sm'>
+    <nav className='fixed flex items-center justify-between h-[6vh] w-full px-[4%]  bg-linear-to-b from-black to-white/0'>
       <img src={theme === 'dark' ? Dark : Light} className='h-4 cursor-pointer ' onClick={() => { toggleTheme() }} />
       <ul className='flex gap-x-4'>
         <HeaderItem text={t.header.home} onClick={() => { }} />
