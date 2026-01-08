@@ -27,17 +27,17 @@ export default function Projects() {
                     <li key={current.title} className={`${current.title === currentProject.title ? 'h-full bg-c-inverted' : 'h-8/10 bg-[#888]'} 
                     flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl`}
                         onClick={() => { setCurrentProject(current) }}>
-                        <span className={`${current.title === currentProject.title ? 'font-bold':'opacity-60'} text-c-text-inverted text-base font-noraml`}>{current.title}</span>
+                        <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} text-c-text-inverted text-base font-noraml`}>{current.title}</span>
                     </li>
                 ))}
             </ul>
-            <section className="grid grid-cols-2 flex-1">
+            <section className="grid grid-cols-2 gap-x-8 flex-1">
                 <div className="flex flex-col h-full justify-between">
                     <div className="flex flex-col">
                         <h5 className="text-2xl mb-2">{currentProject.title}</h5>
-                        <p className="text-base mb-2">Sumary : {currentProject.description}</p>
+                        <p className="text-base mb-2">{currentProject.description}</p>
                         <br />
-                        <p className="text-base mb-2">My Role : {currentProject.myRol}</p>
+                        <p className="text-base mb-2">{currentProject.myRol}</p>
                     </div>
                     <ul className="flex gap-x-3">
                         {currentProject.tools.map((current) => (
@@ -47,13 +47,13 @@ export default function Projects() {
                 </div>
                 <div className="flex flex-col justify-center">
                     <div className="flex justify-between w-full gap-x-4 mb-4">
-                        <Carrusel folderName={currentProject.imagesFolder} count={currentProject.imagesCount}/>
+                        <Carrusel folderName={currentProject.imagesFolder} count={currentProject.imagesCount} />
                     </div>
                     <div className="flex gap-x-4 justify-end">
-                        <button>
+                        <button className={`text-sm ${currentProject.page !== '' ? '' : 'text-[#828282]'}`}>
                             <span>{t.projects.goTo}</span>
                         </button>
-                        <button>
+                        <button className={`text-sm ${currentProject.code !== '' ? '' : 'text-[#828282]'}`}>
                             <span>{t.projects.code}</span>
                         </button>
                     </div>

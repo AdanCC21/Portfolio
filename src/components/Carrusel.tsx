@@ -6,7 +6,7 @@ interface Prompts {
     folderName: string
     count: number
 
-    imagesBase?:string[]
+    imagesBase?: string[]
 }
 
 export default function Carrusel({ folderName, count, imagesBase }: Prompts) {
@@ -35,7 +35,7 @@ export default function Carrusel({ folderName, count, imagesBase }: Prompts) {
 
     return (
         <>
-            <ImageModal state={imgModalState} setState={showImgModal} images={images} />
+            <ImageModal state={imgModalState} setState={showImgModal} images={images} currentIndex={currentImage} />
             <button className="cursor-pointer" onClick={() => { handleMove(false) }}>
                 <span className="text-base">
                     {'<'}
