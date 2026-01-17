@@ -14,7 +14,7 @@ interface ProjectItem extends ProjectDetails {
     title: string
 }
 const actOne: ProjectItem = {
-    title: "Act One", code: '', page: '', imagesFolder: 'actone', imagesCount: 7, tools: [
+    title: "Act One", code: '', page: '', imagesFolder: 'actone', tools: [
         { image: { src: Ts, alt: "typescript" }, name: "TypeScript" },
         { image: { src: React, alt: "React" }, name: "React" },
         { image: { src: Tailwindcss, alt: "Tailwindcss" }, name: "Tailwindcss" },
@@ -24,7 +24,7 @@ const actOne: ProjectItem = {
 }
 
 const wolfForest: ProjectItem = {
-    title: "Wolf Forest", code: '', page: '', imagesFolder: 'wolfForest', imagesCount: 3, tools: [
+    title: "Wolf Forest", code: '', page: '', imagesFolder: 'wolfForest', tools: [
         { image: { src: Ts, alt: "typescript" }, name: "TypeScript" },
         { image: { src: React, alt: "React" }, name: "React" },
         { image: { src: Tailwindcss, alt: "Tailwindcss" }, name: "Tailwindcss" },
@@ -32,7 +32,7 @@ const wolfForest: ProjectItem = {
 }
 
 const gestionPruebas: ProjectItem = {
-    title: "Gestion De Pruebas", code: '', page: '', imagesFolder: 'wolfForest', imagesCount: 3, tools: [
+    title: "Gestion De Pruebas", code: '', page: '', imagesFolder: 'wolfForest',  tools: [
         { image: { src: Ts, alt: "typescript" }, name: "TypeScript" },
         { image: { src: React, alt: "React" }, name: "React" },
         { image: { src: Tailwindcss, alt: "Tailwindcss" }, name: "Tailwindcss" },

@@ -3,7 +3,7 @@ export interface ProjectDetails {
     page: string,
 
     imagesFolder: string,
-    imagesCount: number
+    images:string[]
     tools: Tool[]
 }
 

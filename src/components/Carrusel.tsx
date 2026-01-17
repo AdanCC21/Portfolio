@@ -1,20 +1,13 @@
-import { getImages } from "@/scripts/images"
 import { useEffect, useState } from "react";
 import ImageModal from "./ImageModal";
 
 interface Prompts {
-    folderName: string
-    count: number
-
-    imagesBase?: string[]
+    images: string[]
 }
 
-export default function Carrusel({ folderName, count, imagesBase }: Prompts) {
+export default function Carrusel({  images }: Prompts) {
     const [currentImage, setImage] = useState(0);
     const [imgModalState, showImgModal] = useState(false);
-
-
-    const images = imagesBase ? imagesBase : getImages(folderName, count);
 
     const handleMove = (moveRight: boolean) => {
         console.log(currentImage, images.length)
@@ -31,7 +24,7 @@ export default function Carrusel({ folderName, count, imagesBase }: Prompts) {
 
     useEffect(() => {
         setImage(0);
-    }, [folderName, imagesBase])
+    }, [images])
 
     return (
         <>
@@ -43,7 +36,7 @@ export default function Carrusel({ folderName, count, imagesBase }: Prompts) {
             </button>
 
             <div className="flex flex-col items-center justify-center w-8/10 h-full gap-y-3">
-                <img className="cursor-pointer h-8/10" src={images[currentImage]} alt={folderName} onClick={() => { showImgModal(!imgModalState) }} />
+                <img className="cursor-pointer h-8/10" src={images[currentImage]} onClick={() => { showImgModal(!imgModalState) }} />
                 <ul className="flex gap-x-2">
                     {images.map((_, index) => (
                         <span className={`${index === currentImage && 'text-c-inverted'} cursor-pointer`} onClick={() => { setImage(index) }}> - </span>

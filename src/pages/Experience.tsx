@@ -44,7 +44,7 @@ export default function Experience() {
             <p className='text-md whitespace-pre-line'>{expList[expIndx].description}</p>
           </div>
           <div className='h-1/2 flex w-full justify-between gap-x-4'>
-            <Carrusel folderName='' count={0} imagesBase={expList[expIndx].images} />
+            <Carrusel images={expList[expIndx].images} />
           </div>
         </article>
       </section>
