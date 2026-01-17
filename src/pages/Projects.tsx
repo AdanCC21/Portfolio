@@ -5,6 +5,8 @@ import type { Project } from "@/entities/project.entity";
 import SkillItem from "@/components/SkillItem";
 import Carrusel from "@/components/Carrusel";
 import { getProjects } from "@/scripts/projects";
+import { motion } from "framer-motion";
+import { baseAnimations, listUpContainerAnimations, listUpItemAnimations, pageContainerAnimation, viewPortAnimation } from "@/constants/animations";
 
 export default function Projects() {
     const { t } = useLanguage();
@@ -19,18 +21,25 @@ export default function Projects() {
     const [currentProject, setCurrentProject] = useState<Project>(projects[0])
 
     return (
-        <section className="flex flex-col min-h-screen py-[5%]">
+        <motion.section
+            variants={pageContainerAnimation}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewPortAnimation}
 
+            className="flex flex-col min-h-screen py-[5%]">
             <h3 className="text-4xl font-bold mb-4">{t.projects.title}</h3>
-            <ul className="flex flex-row w-full h-8 items-end border-b-2 border-c-inverted mb-4">
+            <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}
+                className="flex flex-row w-full h-8 items-end border-b-2 border-c-inverted mb-4">
                 {projects.map((current) => (
-                    <li key={current.title} className={`${current.title === currentProject.title ? 'h-full bg-black' : 'h-8/10 bg-[#555]'} 
+                    <motion.li variants={listUpItemAnimations}
+                        key={current.title} className={`${current.title === currentProject.title ? 'h-full bg-black' : 'h-8/10 bg-[#555]'} 
                     flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl`}
                         onClick={() => { setCurrentProject(current) }}>
                         <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} text-white text-base font-noraml`}>{current.title}</span>
-                    </li>
+                    </motion.li>
                 ))}
-            </ul>
+            </motion.ul>
             <section className="grid grid-cols-2 gap-x-8 flex-1">
                 <div className="flex flex-col h-full justify-between">
                     <div className="flex flex-col">
@@ -39,11 +48,11 @@ export default function Projects() {
                         <br />
                         <p className="text-base mb-2">{currentProject.myRol}</p>
                     </div>
-                    <ul className="flex gap-x-3">
+                    <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className="flex gap-x-3">
                         {currentProject.tools.map((current) => (
                             <SkillItem item={current} small />
                         ))}
-                    </ul>
+                    </motion.ul>
                 </div>
                 <div className="flex flex-col justify-center">
                     <div className="flex justify-between w-full gap-x-4 mb-4">
@@ -59,6 +68,6 @@ export default function Projects() {
                     </div>
                 </div>
             </section>
-        </section>
+        </motion.section>
     )
 }

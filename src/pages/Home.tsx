@@ -1,17 +1,28 @@
+import { baseAnimations, listUpContainerAnimations, listUpItemAnimations } from "@/constants/animations";
 import { useLanguage } from "@/hooks/useLanguage"
+import { motion } from "framer-motion";
 
 export default function Home() {
   const { t } = useLanguage();
   return (
-    <section className='flex w-screen h-screen items-center justify-center'>
+    <section
+      className='flex w-screen h-screen items-center justify-center'>
       <div className="flex flex-col md:flex-row w-full h-8/10  md:h-6/10">
-        <div className="flex items-center justify-center h-4/10 md:h-full">
+        <motion.div
+          variants={baseAnimations} initial="hidden" animate="show"
+          className="flex items-center justify-center h-4/10 md:h-full">
           <img src='/draw.png' className="max-h-full max-w-full" />
-        </div>
-        <div className="flex flex-col gap-y-4 justify-center">
-          <h2 className="text-6xl">{t.global.name}</h2>
-          <h5 className="text-2xl">{t.global.profession}</h5>
-        </div>
+        </motion.div>
+        <motion.div
+          variants={listUpContainerAnimations}
+          initial="hidden" animate="show"
+          className="flex flex-col gap-y-4 justify-center">
+          <motion.h2 variants={listUpItemAnimations}
+            className="text-6xl">{t.global.name}</motion.h2>
+          
+          <motion.h5 variants={listUpItemAnimations}
+            className="text-2xl">{t.global.profession}</motion.h5>
+        </motion.div>
       </div>
     </section>
   )

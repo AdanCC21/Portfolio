@@ -3,7 +3,6 @@ export interface ProjectDetails {
     page: string,
 
     imagesFolder: string,
-    images:string[]
     tools: Tool[]
 }
 
@@ -11,6 +10,7 @@ export interface Project extends ProjectDetails {
     title: string,
     description: string,
     myRol:string
+    images:string[]
 }
 
 export type SkillLevel = 'high' | 'avarage' | 'low';
