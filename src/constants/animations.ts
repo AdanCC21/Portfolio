@@ -2,6 +2,11 @@ import { easeInOut, type Variants, type ViewportOptions } from "framer-motion"
 
 export const baseAnimations: Variants = {
     hidden: { opacity: 0, translateY: -20 },
+    show: { opacity: 1, translateY: 0, transition: { duration: .8, ease: easeInOut } },
+}
+
+export const upAnimation: Variants = {
+    hidden: { opacity: 0, translateY: 10 },
     show: { opacity: 1, translateY: 0, transition: { duration: .4, ease: easeInOut } },
 }
 

@@ -37,22 +37,24 @@ export default function ImageModal({ state, setState, images, currentIndex = 0 }
         <>
             {state &&
                 <div className="fixed top-0 left-0 flex justify-between w-screen h-screen bg-black/60 px-[5%] backdrop-blur-sm" onClick={() => { setState(false); }}>
-                    <button className="absolute right-12 top-6 cursor-pointer p-2 group hover:bg-c-inverted rounded-lg" onClick={() => { setState(false) }}>
-                        <span className="text-xl group-hover:text-c-text-inverted">X</span>
+                    <button className="absolute right-12 top-6 cursor-pointer p-2 rounded-lg" onClick={() => { setState(false) }}>
+                        <span className="text-xl">X</span>
                     </button>
-                    <button className="w-fit h-fit my-auto cursor-pointer p-2 group hover:bg-c-inverted rounded-lg" onClick={(e) => { handleMove(false); e.stopPropagation(); }}>
-                        <span className="group-hover:text-c-text-inverted text-2xl">{"<"}</span>
-                    </button>
+                    <ImgModalBtn onClick={(e) => { handleMove(false); e.stopPropagation(); }} text="<" />
 
                     <main className="flex justify-center items-center w-9/10 h-full p-4" >
-                        <img onClick={(e)=>{e.stopPropagation()}} className="max-w-8/10 max-h-8/10 rounded-lg shadow-sm" src={images[currentImage]} />
+                        <img onClick={(e) => { e.stopPropagation() }} className="max-w-8/10 max-h-8/10 rounded-lg shadow-sm" src={images[currentImage]} />
                     </main>
 
-                    <button className="w-fit h-fit my-auto cursor-pointer p-2 group hover:bg-c-inverted rounded-lg" onClick={(e) => { handleMove(true); e.stopPropagation(); }}>
-                        <span className="group-hover:text-c-text-inverted text-2xl">{">"}</span>
-                    </button>
+                    <ImgModalBtn onClick={(e) => { handleMove(true); e.stopPropagation(); }} text=">" />
                 </div>
             }
         </>
     )
 }
+
+const ImgModalBtn = ({ text, onClick }: { text: string, onClick: (e: any) => void }) => (
+    <button className="w-fit h-fit my-auto cursor-pointer p-2 rounded-lg" onClick={onClick}>
+        <span className=" text-2xl">{text}</span>
+    </button>
+)

@@ -1,12 +1,11 @@
 import { useLanguage } from "@/hooks/useLanguage"
 import { useEffect, useState } from "react";
-
 import type { Project } from "@/entities/project.entity";
+import { getProjects } from "@/scripts/projects";
+import { listUpContainerAnimations, listUpItemAnimations, pageContainerAnimation, viewPortAnimation } from "@/constants/animations";
+import { AnimatePresence, motion } from "framer-motion";
 import SkillItem from "@/components/SkillItem";
 import Carrusel from "@/components/Carrusel";
-import { getProjects } from "@/scripts/projects";
-import { motion } from "framer-motion";
-import { baseAnimations, listUpContainerAnimations, listUpItemAnimations, pageContainerAnimation, viewPortAnimation } from "@/constants/animations";
 
 export default function Projects() {
     const { t } = useLanguage();
@@ -40,34 +39,39 @@ export default function Projects() {
                     </motion.li>
                 ))}
             </motion.ul>
-            <section className="grid grid-cols-2 gap-x-8 flex-1">
-                <div className="flex flex-col h-full justify-between">
-                    <div className="flex flex-col">
-                        <h5 className="text-2xl mb-2">{currentProject.title}</h5>
-                        <p className="text-base mb-2">{currentProject.description}</p>
-                        <br />
-                        <p className="text-base mb-2">{currentProject.myRol}</p>
-                    </div>
-                    <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className="flex gap-x-3">
-                        {currentProject.tools.map((current) => (
-                            <SkillItem item={current} small />
-                        ))}
-                    </motion.ul>
-                </div>
-                <div className="flex flex-col justify-center">
-                    <div className="flex justify-between w-full gap-x-4 mb-4">
-                        <Carrusel images={currentProject.images} />
-                    </div>
-                    <div className="flex gap-x-4 justify-end">
-                        <button className={`text-sm ${currentProject.page !== '' ? '' : 'text-[#828282]'}`}>
-                            <span>{t.projects.goTo}</span>
-                        </button>
-                        <button className={`text-sm ${currentProject.code !== '' ? '' : 'text-[#828282]'}`}>
-                            <span>{t.projects.code}</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
+            <AnimatePresence mode="wait">
+                <motion.section key={currentProject.title} variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className="grid grid-cols-2 gap-x-8 flex-1">
+                    <motion.div variants={listUpItemAnimations} className="flex flex-col h-full justify-between">
+                        <div className="flex flex-col">
+                            <h5 className="text-2xl mb-2">{currentProject.title}</h5>
+                            <p className="text-base mb-2">{currentProject.description}</p>
+                            <br />
+                            <p className="text-base mb-2">{currentProject.myRol}</p>
+                        </div>
+
+                        <ul className="flex gap-x-3">
+                            {currentProject.tools.map((current) => (
+                                <SkillItem item={current} small />
+                            ))}
+                        </ul>
+                    </motion.div>
+                    
+                    <motion.div variants={listUpItemAnimations} className="flex flex-col justify-center">
+                        <div className="flex justify-between w-full gap-x-4 mb-4">
+                            <Carrusel images={currentProject.images} />
+                        </div>
+
+                        <div className="flex gap-x-4 justify-end">
+                            <button className={`text-sm ${currentProject.page !== '' ? '' : 'text-[#828282]'}`}>
+                                <span>{t.projects.goTo}</span>
+                            </button>
+                            <button className={`text-sm ${currentProject.code !== '' ? '' : 'text-[#828282]'}`}>
+                                <span>{t.projects.code}</span>
+                            </button>
+                        </div>
+                    </motion.div>
+                </motion.section>
+            </AnimatePresence>
         </motion.section>
     )
 }
