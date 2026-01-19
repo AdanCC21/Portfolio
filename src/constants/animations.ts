@@ -5,9 +5,15 @@ export const baseAnimations: Variants = {
     show: { opacity: 1, translateY: 0, transition: { duration: .8, ease: easeInOut } },
 }
 
-export const upAnimation: Variants = {
+export const defaultUpAnimation: Variants = {
     hidden: { opacity: 0, translateY: 10 },
     show: { opacity: 1, translateY: 0, transition: { duration: .4, ease: easeInOut } },
+}
+
+export const fastUpAnimation: Variants = {
+    hidden: { opacity: 0, translateY: 10 },
+    show: { opacity: 1, translateY: 0, transition: { duration: .2, ease: easeInOut } },
+    out: { opacity: 0, translateY: -10 }
 }
 
 export const pageContainerAnimation: Variants = {
