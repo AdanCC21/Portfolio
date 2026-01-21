@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import ImageModal from "./ImageModal";
+import { motion } from "framer-motion";
+import { fadeInOutAnimation } from "@/constants/animations";
 
 interface Prompts {
     images: string[]
@@ -10,7 +12,6 @@ export default function Carrusel({  images }: Prompts) {
     const [imgModalState, showImgModal] = useState(false);
 
     const handleMove = (moveRight: boolean) => {
-        console.log(currentImage, images.length)
         if (currentImage === images.length - 1 && moveRight) {
             setImage(0);
         } else {
@@ -35,14 +36,15 @@ export default function Carrusel({  images }: Prompts) {
                 </span>
             </button>
 
-            <div className="flex flex-col items-center justify-center w-8/10 h-full gap-y-3">
+            <motion.div key={currentImage} variants={fadeInOutAnimation} initial="hidden" animate="show"
+            className="flex flex-col items-center justify-center w-8/10 h-full gap-y-3">
                 <img className="cursor-pointer h-8/10" src={images[currentImage]} onClick={() => { showImgModal(!imgModalState) }} />
                 <ul className="flex gap-x-2">
                     {images.map((_, index) => (
                         <span className={`${index === currentImage && 'text-c-inverted'} cursor-pointer`} onClick={() => { setImage(index) }}> - </span>
                     ))}
                 </ul>
-            </div>
+            </motion.div>
 
             <button className="cursor-pointer" onClick={() => { handleMove(true) }}>
                 <span className="text-base">

@@ -16,6 +16,12 @@ export const fastUpAnimation: Variants = {
     out: { opacity: 0, translateY: -10 }
 }
 
+export const fadeInOutAnimation: Variants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: .2, ease: easeInOut } },
+    out: { opacity: 0 }
+}
+
 export const pageContainerAnimation: Variants = {
     hidden: { opacity: 0 },
     show: {

@@ -32,8 +32,9 @@ export default function Projects() {
                 className="flex flex-row w-full h-8 items-end border-b-2 border-c-inverted mb-4">
                 {projects.map((current) => (
                     <motion.li variants={listUpItemAnimations}
-                        key={current.title} className={`${current.title === currentProject.title ? 'h-full bg-black' : 'h-8/10 bg-[#555]'} 
-                    flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl`}
+                        key={current.title}
+                        className={`${current.title === currentProject.title ? 'h-full bg-[#191919]' : 'h-6/10 bg-[#555] hover:h-8/10 duration-125 hover:bg-[#333]'} 
+                            flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl`}
                         onClick={() => { setCurrentProject(current) }}>
                         <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} text-white text-base font-noraml`}>{current.title}</span>
                     </motion.li>
@@ -55,18 +56,26 @@ export default function Projects() {
                             ))}
                         </ul>
                     </motion.div>
-                    
+
                     <motion.div variants={listUpItemAnimations} className="flex flex-col justify-center">
                         <div className="flex justify-between w-full gap-x-4 mb-4">
                             <Carrusel images={currentProject.images} />
                         </div>
 
                         <div className="flex gap-x-4 justify-end">
-                            <button className={`text-sm ${currentProject.page !== '' ? '' : 'text-[#828282]'}`}>
-                                <span>{t.projects.goTo}</span>
+                            <button className={`text-sm ${currentProject.page ? 'cursor-pointer' : 'text-[#828282]'}`}>
+                                {currentProject.page ?
+                                    <a href={currentProject.page} target="_blank">{t.projects.goTo}</a>
+                                    :
+                                    <span>{t.projects.goTo}</span>
+                                }
                             </button>
-                            <button className={`text-sm ${currentProject.code !== '' ? '' : 'text-[#828282]'}`}>
-                                <span>{t.projects.code}</span>
+                            <button className={`text-sm ${currentProject.code ? 'cursor-pointer' : 'text-[#828282]'}`}>
+                                {currentProject.code ?
+                                    <a href={currentProject.code} target="_blank">{t.projects.code}</a>
+                                    :
+                                    <span>{t.projects.code}</span>
+                                }
                             </button>
                         </div>
                     </motion.div>
