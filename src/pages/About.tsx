@@ -20,7 +20,10 @@ export default function About({ pageRef }: Prompts) {
     return (
         <section ref={pageRef} className='flex gap-x-8 py-[5%] min-h-[80vh] pagePadding'>
             <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='flex flex-col flex-2 justify-center'>
-                <motion.h3 variants={listUpItemAnimations} className='text-4xl font-bold mb-4'>{t.aboutMe.title}</motion.h3>
+                <motion.div variants={listUpItemAnimations} className='flex gap-x-4'>
+                    <h3 className='text-4xl font-bold mb-4'>{t.aboutMe.title}</h3>
+                    <img src='draws/Proud.webp' alt='draw de hecho' className='h-10 w-fit'/>
+                </motion.div>
                 <motion.p variants={listUpItemAnimations} className='whitespace-pre-line mb-4'>{t.aboutMe.description}</motion.p>
                 <motion.ul variants={listUpItemAnimations} className='flex gap-2'>
                     <SocialItem href='https://www.linkedin.com/in/adan-gonzalez-cese%C3%B1a-584411338' src={linkedin} alt='linkedin' theme={theme} />
@@ -33,8 +36,9 @@ export default function About({ pageRef }: Prompts) {
                     </li>
                 </motion.ul>
             </motion.div>
-            <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='flex flex-1 items-center'>
-                <motion.img variants={listUpItemAnimations} src='yo.webp' className='rounded-full ' />
+            <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='relative flex flex-1 items-center'>
+                <motion.img variants={listUpItemAnimations} alt='yo' src='yo.webp' className='rounded-full ' />
+                <motion.img variants={listUpItemAnimations} alt='draw' src='draws/Music2.webp' className='absolute h-20 right-0 bottom-0 -translate-y-1/2' />
             </motion.div>
         </section>
     )

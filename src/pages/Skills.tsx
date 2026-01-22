@@ -2,8 +2,8 @@ import { useLanguage } from "@/hooks/useLanguage"
 
 import SkillItem from "@/components/SkillItem"
 import { motion } from "framer-motion"
-import { listRightContainerAnimation, listUpContainerAnimations, listUpItemAnimations, viewPortAnimation } from "@/constants/animations"
-import { useEffect, useState, type RefObject } from "react"
+import { listRightContainerAnimation, listUpItemAnimations, viewPortAnimation } from "@/constants/animations"
+import { type RefObject } from "react"
 import { skillsList } from "@/constants/skills"
 
 interface Prompts {
