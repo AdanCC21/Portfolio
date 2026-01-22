@@ -1,5 +1,5 @@
 import { useLanguage } from "@/hooks/useLanguage"
-import { useEffect, useState } from "react";
+import { useEffect, useState, type RefObject } from "react";
 import type { Project } from "@/entities/project.entity";
 import { getProjects } from "@/scripts/projects";
 import { listUpContainerAnimations, listUpItemAnimations, pageContainerAnimation, viewPortAnimation } from "@/constants/animations";
@@ -7,7 +7,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import SkillItem from "@/components/SkillItem";
 import Carrusel from "@/components/Carrusel";
 
-export default function Projects() {
+interface Prompts {
+    pageRef: RefObject<any>
+}
+
+
+export default function Projects({ pageRef }: Prompts) {
     const { t } = useLanguage();
 
     useEffect(() => {
@@ -21,12 +26,13 @@ export default function Projects() {
 
     return (
         <motion.section
+            ref={ pageRef}
             variants={pageContainerAnimation}
             initial="hidden"
             whileInView="show"
             viewport={viewPortAnimation}
 
-            className="flex flex-col min-h-screen py-[5%]">
+            className="flex flex-col min-h-[80vh] py-[5%] pagePadding">
             <h3 className="text-4xl font-bold mb-4">{t.projects.title}</h3>
             <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}
                 className="flex flex-row w-full h-8 items-end border-b-2 border-c-inverted mb-4">

@@ -4,9 +4,13 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { getDate } from '@/scripts/date';
 import { getExperience } from '@/scripts/experience';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type RefObject } from 'react'
 
-export default function Experience() {
+interface Prompts {
+  pageRef: RefObject<any>
+}
+
+export default function Experience({ pageRef }: Prompts) {
   const { t } = useLanguage();
 
   const [expList, setExpList] = useState(getExperience(t))
@@ -18,11 +22,11 @@ export default function Experience() {
   }, [t])
 
   return (
-    <section className='flex flex-col pb-[5%] w-full h-screen '>
+    <section ref={pageRef} className='flex flex-col pb-[5%] w-full h-screen pagePadding'>
       <motion.h3 variants={listUpContainerAnimations} initial="hidden" whileInView='show' viewport={viewPortAnimation} className='text-4xl font-bold'>{t.experience.title}</motion.h3>
 
       <section className='flex justify-between w-full my-4 min-h-80'>
-        <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView='show' viewport={viewPortAnimation} className='relative flex flex-col w-1/3'>
+        <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView='show' viewport={viewPortAnimation} className='relative flex flex-col w-1/4'>
           {expList.map((current, index) => (
             <motion.li variants={listUpItemAnimations} className='flex group w-fit cursor-pointer ' onClick={() => { setExpIndx(index) }}>
               <div className={`${index !== expList.length - 1 && 'bg-c-inverted'} relative h-12 w-px group-hover:h-22 transition-all ease-in-out duration-150`}>
@@ -39,7 +43,7 @@ export default function Experience() {
           ))}
         </motion.ul>
 
-        <motion.article variants={fastUpAnimation} initial="hidden" whileInView='show' viewport={viewPortAnimation} className='flex flex-col w-2/3 h-full gap-y-4'>
+        <motion.article variants={fastUpAnimation} initial="hidden" whileInView='show' viewport={viewPortAnimation} className='flex flex-col w-3/4 h-full gap-y-4'>
           <div className='flex flex-col h-1/2 overflow-y-auto'>
             <span className='text-2xl'>{expList[expIndx].title}</span>
             <span className='text-xs text-[#828282]'>{getDate(new Date(expList[expIndx].date.year, expList[expIndx].date.month, expList[expIndx].date.day))}</span>

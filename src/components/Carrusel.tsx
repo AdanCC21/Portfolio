@@ -38,7 +38,7 @@ export default function Carrusel({  images }: Prompts) {
 
             <motion.div key={currentImage} variants={fadeInOutAnimation} initial="hidden" animate="show"
             className="flex flex-col items-center justify-center w-8/10 h-full gap-y-3">
-                <img className="cursor-pointer h-8/10" src={images[currentImage]} onClick={() => { showImgModal(!imgModalState) }} />
+                <img className="h-8/10 cursor-pointer rounded-lg" src={images[currentImage]} onClick={() => { showImgModal(!imgModalState) }} />
                 <ul className="flex gap-x-2">
                     {images.map((_, index) => (
                         <span className={`${index === currentImage && 'text-c-inverted'} cursor-pointer`} onClick={() => { setImage(index) }}> - </span>

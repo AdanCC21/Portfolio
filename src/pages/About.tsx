@@ -7,13 +7,18 @@ import { useTheme } from '@/hooks/useTheme'
 import type { ThemeType } from '@/context/ThemeContext'
 import { motion } from 'framer-motion'
 import { listUpContainerAnimations, listUpItemAnimations, viewPortAnimation } from '@/constants/animations'
+import type { RefObject } from 'react'
 
-export default function About() {
+interface Prompts {
+    pageRef: RefObject<any>
+}
+
+export default function About({ pageRef }: Prompts) {
     const { t } = useLanguage();
     const { theme } = useTheme();
 
     return (
-        <section className='flex gap-x-8 py-[5%]'>
+        <section ref={pageRef} className='flex gap-x-8 py-[5%] min-h-[80vh] pagePadding'>
             <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='flex flex-col flex-2 justify-center'>
                 <motion.h3 variants={listUpItemAnimations} className='text-4xl font-bold mb-4'>{t.aboutMe.title}</motion.h3>
                 <motion.p variants={listUpItemAnimations} className='whitespace-pre-line mb-4'>{t.aboutMe.description}</motion.p>
