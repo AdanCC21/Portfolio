@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Header homeRef={homeRef} skillsRef={skillsRef} projectsRef={projectsRef} experienceRef={experienceRef} aboutRef={aboutRef} />
-      <main>
+      <main className="flex flex-col gap-y-8">
         <Home pageRef={homeRef} />
         <Skills pageRef={skillsRef} />
         <Projects pageRef={projectsRef} />
