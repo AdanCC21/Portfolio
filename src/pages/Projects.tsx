@@ -26,28 +26,26 @@ export default function Projects({ pageRef }: Prompts) {
 
     return (
         <motion.section
-            ref={ pageRef}
+            ref={pageRef}
             variants={pageContainerAnimation}
             initial="hidden"
             whileInView="show"
             viewport={viewPortAnimation}
-
             className="flex flex-col min-h-[80vh] py-[5%] pagePadding">
             <h3 className="text-4xl font-bold mb-4">{t.projects.title}</h3>
             <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}
-                className="flex flex-row w-full h-8 items-end border-b-2 border-c-inverted mb-4">
+                className="flex flex-nowrap h-14 md:h-8 w-full items-end border-b-2 border-c-inverted mb-4 overflow-x-auto">
                 {projects.map((current) => (
                     <motion.li variants={listUpItemAnimations}
                         key={current.title}
-                        className={`${current.title === currentProject.title ? 'h-full bg-[#191919]' : 'h-6/10 bg-[#555] hover:h-8/10 duration-125 hover:bg-[#333]'} 
-                            flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl`}
+                        className={`${current.title === currentProject.title ? 'h-full bg-[#191919]' : 'h-6/10 bg-[#555] hover:h-8/10 duration-125 hover:bg-[#333]'} flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl`}
                         onClick={() => { setCurrentProject(current) }}>
-                        <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} text-white text-base font-noraml`}>{current.title}</span>
+                        <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} whitespace-nowrap text-white text-base`}>{current.title}</span>
                     </motion.li>
                 ))}
             </motion.ul>
             <AnimatePresence mode="wait">
-                <motion.section key={currentProject.title} variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className="grid grid-cols-2 gap-x-8 flex-1">
+                <motion.section key={currentProject.title} variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className="flex flex-col md:grid md:grid-cols-2 gap-8 flex-1">
                     <motion.div variants={listUpItemAnimations} className="flex flex-col h-full justify-between">
                         <div className="flex flex-col">
                             <h5 className="text-2xl mb-2">{currentProject.title}</h5>
@@ -56,7 +54,7 @@ export default function Projects({ pageRef }: Prompts) {
                             <p className="text-base mb-2">{currentProject.myRol}</p>
                         </div>
 
-                        <ul className="flex gap-x-3">
+                        <ul className="flex gap-x-4 overflow-x-auto">
                             {currentProject.tools.map((current) => (
                                 <SkillItem item={current} small />
                             ))}
