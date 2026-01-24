@@ -6,6 +6,7 @@ import Experience from "./pages/Experience"
 import Home from "./pages/Home"
 import Projects from "./pages/Projects"
 import Skills from "./pages/Skills"
+import Achievements from "./pages/Achievements"
 
 function App() {
   const homeRef = useRef(null);
@@ -22,6 +23,7 @@ function App() {
         <Skills pageRef={skillsRef} />
         <Projects pageRef={projectsRef} />
         <Experience pageRef={experienceRef} />
+        <Achievements />
         <About pageRef={aboutRef} />
       </main>
       <Footer />
