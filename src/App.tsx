@@ -22,8 +22,8 @@ function App() {
         <Home pageRef={homeRef} />
         <Skills pageRef={skillsRef} />
         <Projects pageRef={projectsRef} />
-        <Experience pageRef={experienceRef} />
-        <Achievements />
+        {/* <Experience pageRef={experienceRef} /> */}
+        <Achievements pageRef={experienceRef}/>
         <About pageRef={aboutRef} />
       </main>
       <Footer />

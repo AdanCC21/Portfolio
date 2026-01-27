@@ -26,8 +26,8 @@ export default function Header({ homeRef, skillsRef, projectsRef, experienceRef,
   }
 
   return (
-    <nav className='fixed flex bg-c-bg h-[6vh] w-full justify-between items-center md:justify-start px-[4%] z-100'>
-      <div className='hidden md:flex items-center justify-between h-full w-full z-100'>
+    <nav className='fixed flex bg-c-bg h-[6vh] w-full justify-between items-center md:justify-start px-[4%] z-50'>
+      <div className='hidden md:flex items-center justify-between h-full w-full z-50'>
         <img src={theme === 'dark' ? Dark : Light} className='h-4 cursor-pointer ' onClick={() => { toggleTheme() }} />
         <ul className='flex gap-x-4 '>
           <HeaderItem text={t.header.home} onClick={() => { goTo(homeRef) }} />
@@ -43,7 +43,7 @@ export default function Header({ homeRef, skillsRef, projectsRef, experienceRef,
       <button className='md:hidden relative cursor-pointer' onClick={() => { showMenu(prev => !prev) }}>
         <img src={Menu} alt='menu' />
         {viewMenu &&
-          <div className='absolute flex gap-x-4 bg-c-bg border border-[#ccc] rounded-lg rounded-tl-none z-101'>
+          <div className='absolute flex gap-x-4 bg-c-bg border border-[#ccc] rounded-lg rounded-tl-none z-51'>
             <ul className='flex flex-col w-fit list-none'>
               <li><HeaderItem text={t.header.home} onClick={() => { goTo(homeRef) }} /></li>
               <li><HeaderItem text={t.header.skills} onClick={() => { goTo(skillsRef) }} /></li>
