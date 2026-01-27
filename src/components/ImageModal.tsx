@@ -1,4 +1,5 @@
 import { fastUpAnimation } from "@/constants/animations"
+import { handleMove } from "@/scripts/carrusel"
 import { AnimatePresence, motion } from "framer-motion"
 import type React from "react"
 import { useEffect, useState } from "react"
@@ -12,7 +13,7 @@ interface Prompts {
 
 }
 export default function ImageModal({ state, setState, images, currentIndex = 0 }: Prompts) {
-    const [currentImage, setImage] = useState(currentIndex);
+    const [currentImage, setImage] = useState({ index: currentIndex, loading: false });
     useEffect(() => {
         if (state) {
             document.documentElement.style.overflowY = "hidden";
@@ -24,10 +25,10 @@ export default function ImageModal({ state, setState, images, currentIndex = 0 }
         const handleKey = (e: KeyboardEvent) => {
             switch (e.key) {
                 case "ArrowRight":
-                    handleMove(true);
+                    handleMove(true, images.length, setImage);
                     break;
                 case "ArrowLeft":
-                    handleMove(false);
+                    handleMove(false, images.length, setImage);
                     break;
                 case "Escape":
                     setState(false)
@@ -43,18 +44,8 @@ export default function ImageModal({ state, setState, images, currentIndex = 0 }
     }, [state])
 
     useEffect(() => {
-        setImage(currentIndex)
-    }, [images])
-
-    const handleMove = (moveRight: boolean) => {
-        setImage((prev) => {
-            if (moveRight) {
-                return prev === images.length - 1 ? 0 : prev + 1;
-            } else {
-                return prev === 0 ? images.length - 1 : prev - 1;
-            }
-        });
-    };
+        setImage(prev => ({ ...prev, index: currentIndex }))
+    }, [images, currentIndex])
 
 
     return (
@@ -65,13 +56,16 @@ export default function ImageModal({ state, setState, images, currentIndex = 0 }
                         <span className="text-xl">X</span>
                     </motion.button>
 
-                    <ImgModalBtn onClick={(e) => { handleMove(false); e.stopPropagation(); }} text="<" />
+                    <ImgModalBtn onClick={(e) => { handleMove(false, images.length, setImage); e.stopPropagation(); }} text="<" />
 
                     <main className="flex justify-center items-center w-9/10 h-full p-4" >
-                        <img onClick={(e) => { e.stopPropagation() }} className="max-w-8/10 max-h-8/10 rounded-lg shadow-sm" src={images[currentImage]} />
+                        {currentImage.loading &&
+                            <div className="w-12 h-12 border-4 border-c-inverted border-t-transparent rounded-full animate-spin"></div>
+                        }
+                        <img onLoad={() => { setImage(prev => ({ ...prev, loading: false })) }} className={`${currentImage.loading && 'hidden'} max-w-8/10 max-h-8/10 rounded-lg shadow-sm`} src={images[currentImage.index]} onClick={(e) => { e.stopPropagation() }} />
                     </main>
 
-                    <ImgModalBtn onClick={(e) => { handleMove(true); e.stopPropagation(); }} text=">" />
+                    <ImgModalBtn onClick={(e) => { handleMove(true, images.length, setImage); e.stopPropagation(); }} text=">" />
                 </motion.div>
             }
         </AnimatePresence>

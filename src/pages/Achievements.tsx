@@ -1,5 +1,5 @@
 import Modal from "@/components/Modal";
-import { fadeInOutAnimation, listRightContainerAnimation, listUpContainerAnimations, listUpItemAnimations, viewPortAnimation } from "@/constants/animations";
+import { fadeInOutAnimation, listUpItemAnimations, viewPortAnimation } from "@/constants/animations";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getDate } from "@/scripts/date";
 import { getExperience } from "@/scripts/experience";
@@ -23,7 +23,7 @@ export default function Achievements({ pageRef }: Prompts) {
   }, [t])
 
   return (
-    <section ref={pageRef} className="flex flex-col min-h-screen pagePadding">
+    <section ref={pageRef} className="flex flex-col pagePadding">
       <motion.h3 variants={fadeInOutAnimation} initial="hidden" whileInView={'show'} viewport={viewPortAnimation} className="text-4xl">{t.experience.title}</motion.h3>
       <ul className="relative flex flex-col w-full justify-between list-none">
         {expList.map((current, index) => (
