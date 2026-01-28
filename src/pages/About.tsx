@@ -24,7 +24,16 @@ export default function About({ pageRef }: Prompts) {
                     <h3 className='text-4xl font-bold mb-4'>{t.aboutMe.title}</h3>
                     <img src='draws/Proud.webp' alt='draw de hecho' className='h-10 w-fit' />
                 </motion.div>
+                
+                <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='relative md:hidden flex w-full h-full items-center justify-center my-4'>
+                    <motion.div variants={listUpItemAnimations} className='relative w-6/10 sm:w-4/10 h-fit'>
+                        <img alt='yo' src='yo.webp' className='rounded-full ' />
+                        <img alt='draw' src='draws/Music2.webp' className='absolute h-10 sm:h-12 right-0 bottom-0 ' />
+                    </motion.div>
+                </motion.div>
+                
                 <motion.p variants={listUpItemAnimations} className='whitespace-pre-line mb-4'>{t.aboutMe.description}</motion.p>
+                
                 <motion.ul variants={listUpItemAnimations} className='flex gap-2'>
                     <SocialItem href='https://www.linkedin.com/in/adan-gonzalez-cese%C3%B1a-584411338' src={linkedin} alt='linkedin' theme={theme} />
                     <SocialItem href='https://github.com/AdanCC21' src={github} alt='github' theme={theme} />
@@ -37,7 +46,7 @@ export default function About({ pageRef }: Prompts) {
                 </motion.ul>
             </motion.div>
 
-            <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='relative flex flex-1 items-center'>
+            <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='hidden relative md:flex flex-1 items-center'>
                 <motion.div variants={listUpItemAnimations} className='relative w-fit h-fit'>
                     <img alt='yo' src='yo.webp' className='rounded-full ' />
                     <img alt='draw' src='draws/Music2.webp' className='absolute h-16 sm:h-12 right-0 bottom-0 ' />

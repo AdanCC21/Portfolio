@@ -40,7 +40,7 @@ export default function Header({ homeRef, skillsRef, projectsRef, experienceRef,
           onClick={() => { setLang() }} >{lang === 'es' ? 'es' : 'en'}</span>
       </div>
 
-      <button className='md:hidden relative cursor-pointer' onClick={() => { showMenu(prev => !prev) }}>
+      <div className='md:hidden relative cursor-pointer' onClick={() => { showMenu(prev => !prev) }}>
         <img src={Menu} alt='menu' />
         {viewMenu &&
           <div className='absolute flex gap-x-4 bg-c-bg border border-[#ccc] rounded-lg rounded-tl-none z-51'>
@@ -53,7 +53,7 @@ export default function Header({ homeRef, skillsRef, projectsRef, experienceRef,
             </ul>
           </div>
         }
-      </button>
+      </div>
       <div className='md:hidden flex h-full gap-x-4 items-center'>
         <span className='text-base font-medium cursor-pointer'
           onClick={() => { setLang() }} >{lang === 'es' ? 'es' : 'en'}</span>
