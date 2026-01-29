@@ -72,6 +72,7 @@ export const listUpContainerAnimations: Variants = {
     }
 }
 
+
 export const listUpItemAnimations: Variants = {
     hidden: { opacity: 0, translateY: 10 },
     show: {
@@ -82,4 +83,36 @@ export const listUpItemAnimations: Variants = {
             ease: easeInOut
         }
     }
+}
+
+// Constantes ahora si
+const showDefalt = {
+    opacity: 1,
+    translateY: 0,
+    translateX: 0,
+    transition: {
+        duration: .1,
+        ease: easeInOut
+    }
+}
+export const showUpContainer: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+            duration: .8,
+            ease: easeInOut
+        }
+    }
+}
+
+export const showUp: Variants = {
+    hidden: { opacity: 0, translateY: 10 },
+    show: showDefalt
+}
+
+export const showDown: Variants = {
+    hidden: { opacity: 0, translateY: -10 },
+    show: showDefalt
 }
