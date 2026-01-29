@@ -32,7 +32,7 @@ export default function Carrusel({ images }: Prompts) {
                         <div className="w-4 h-4 border-4 border-c-inverted border-t-transparent rounded-full animate-spin"></div>
                     </div>
                 }
-                <img onLoad={() => { setImage(prev => ({ ...prev, loading: false })) }} className="h-8/10 cursor-pointer rounded-lg" src={images[currentImage.index]} onClick={() => { showImgModal(!imgModalState) }} />
+                <img onLoad={() => { setImage(prev => ({ ...prev, loading: false })) }} className="w-fit h-8/10 cursor-pointer rounded-lg" src={images[currentImage.index]} onClick={() => { showImgModal(!imgModalState) }} />
 
                 <ul className="flex gap-x-2">
                     {images.map((_, index) => (

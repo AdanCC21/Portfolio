@@ -9,11 +9,11 @@ interface Prompts {
   homeRef: React.RefObject<any>;
   skillsRef: React.RefObject<any>;
   projectsRef: React.RefObject<any>;
-  experienceRef: React.RefObject<any>;
+  achivementRef: React.RefObject<any>;
   aboutRef: React.RefObject<any>;
 }
 
-export default function Header({ homeRef, skillsRef, projectsRef, experienceRef, aboutRef }: Prompts) {
+export default function Header({ homeRef, skillsRef, projectsRef, achivementRef, aboutRef }: Prompts) {
   const { t, lang, setLang } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [viewMenu, showMenu] = useState(false);
@@ -33,7 +33,7 @@ export default function Header({ homeRef, skillsRef, projectsRef, experienceRef,
           <HeaderItem text={t.header.home} onClick={() => { goTo(homeRef) }} />
           <HeaderItem text={t.header.skills} onClick={() => { goTo(skillsRef) }} />
           <HeaderItem text={t.header.projects} onClick={() => { goTo(projectsRef) }} />
-          <HeaderItem text={t.header.experience} onClick={() => { goTo(experienceRef) }} />
+          <HeaderItem text={t.header.achivement} onClick={() => { goTo(achivementRef) }} />
           <HeaderItem text={t.header.aboutMe} onClick={() => { goTo(aboutRef) }} />
         </ul>
         <span className='text-base font-medium cursor-pointer'
@@ -48,7 +48,7 @@ export default function Header({ homeRef, skillsRef, projectsRef, experienceRef,
               <li><HeaderItem text={t.header.home} onClick={() => { goTo(homeRef) }} /></li>
               <li><HeaderItem text={t.header.skills} onClick={() => { goTo(skillsRef) }} /></li>
               <li><HeaderItem text={t.header.projects} onClick={() => { goTo(projectsRef) }} /></li>
-              <li><HeaderItem text={t.header.experience} onClick={() => { goTo(experienceRef) }} /></li>
+              <li><HeaderItem text={t.header.achivement} onClick={() => { goTo(achivementRef) }} /></li>
               <li><HeaderItem text={t.header.aboutMe} onClick={() => { goTo(aboutRef) }} /></li>
             </ul>
           </div>

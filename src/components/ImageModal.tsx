@@ -1,5 +1,6 @@
 import { fastUpAnimation } from "@/constants/animations"
 import { handleMove } from "@/scripts/carrusel"
+import { handleKey } from "@/scripts/keypress"
 import { AnimatePresence, motion } from "framer-motion"
 import type React from "react"
 import { useEffect, useState } from "react"
@@ -22,24 +23,10 @@ export default function ImageModal({ state, setState, images, currentIndex = 0 }
         }
         if (!state) return;
 
-        const handleKey = (e: KeyboardEvent) => {
-            switch (e.key) {
-                case "ArrowRight":
-                    handleMove(true, images.length, setImage);
-                    break;
-                case "ArrowLeft":
-                    handleMove(false, images.length, setImage);
-                    break;
-                case "Escape":
-                    setState(false)
-                    break;
-            }
-        }
-
-        window.addEventListener("keydown", handleKey);
+        window.addEventListener("keydown", (e: KeyboardEvent) => { handleKey(e, setState, images.length, setImage) });
 
         return () => {
-            window.removeEventListener("keydown", handleKey);
+            window.removeEventListener("keydown", (e: KeyboardEvent) => { handleKey(e, setState, images.length, setImage) });
         }
     }, [state])
 

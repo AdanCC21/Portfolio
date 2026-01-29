@@ -1,10 +1,11 @@
-interface JSONInfo {
+export interface ExperienceItem {
     title: string
     description: string
     date: { day: number, month: number, year: number }
+    images: string[]
 }
 export function getExperience(t: any) {
-    const jsonExperiences: JSONInfo[] = t.experience.experiencesList;
+    const jsonExperiences: ExperienceItem[] = t.achivement.achivementsList;
 
     const allImages = import.meta.glob(
         '/public/experience/**/*.{png,jpg,jpeg,webp}',
@@ -13,10 +14,10 @@ export function getExperience(t: any) {
 
     const entries = Object.entries(allImages);
 
-    const experiences = jsonExperiences.map((current: JSONInfo) => {
+    const experiences = jsonExperiences.map((current: ExperienceItem) => {
         let folder = current.title.toLowerCase();
-        folder = folder.replaceAll(' ','-')
-        
+        folder = folder.replaceAll(' ', '-')
+
         const images = entries
             .filter(([path]) => path.includes(`/experience/${folder}/`))
             .map(([, value]) => value as string);

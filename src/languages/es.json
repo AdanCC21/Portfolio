@@ -7,7 +7,7 @@
     "home": "Inicio",
     "skills": "Habilidades",
     "projects": "Proyectos",
-    "experience": "Experiencia",
+    "achivement": "Logros",
     "aboutMe": "Sobre mi"
   },
   "skills": {
@@ -36,9 +36,9 @@
     "code": "Código",
     "goTo": "Ver"
   },
-  "experience": {
-    "title": "Experiencia",
-    "experiencesList": [
+  "achivement": {
+    "title": "Logros",
+    "achivementsList": [
       {
         "title": "TalentLand",
         "date": {
