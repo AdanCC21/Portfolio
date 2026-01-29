@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { listRightContainerAnimation, listUpItemAnimations, viewPortAnimation } from "@/constants/animations"
 import { type RefObject } from "react"
 import { skillsList } from "@/constants/skills"
+import { useTheme } from "@/hooks/useTheme"
 
 interface Prompts {
     pageRef: RefObject<any>
@@ -13,6 +14,7 @@ interface Prompts {
 
 export default function Skills({ pageRef }: Prompts) {
     const { t } = useLanguage();
+    const {theme} = useTheme();
 
 
     return (
@@ -25,7 +27,7 @@ export default function Skills({ pageRef }: Prompts) {
             className="flex flex-col min-h-[50vh] py-[5%] pagePadding">
             <h2 className="text-4xl font-semibold mb-2">{t.skills.title}</h2>
             <span className="text-base font-normal mb-4">{t.skills.description}</span>
-            
+
             <motion.ul variants={listRightContainerAnimation}
                 initial="hidden"
                 whileInView="show"
@@ -33,8 +35,8 @@ export default function Skills({ pageRef }: Prompts) {
                 {skillsList.map((current) => (
                     <motion.div variants={listUpItemAnimations}>
                         <SkillItem
-                            showSkillLevel
                             item={current}
+                            theme={theme}
                         />
                     </motion.div>
                 ))}

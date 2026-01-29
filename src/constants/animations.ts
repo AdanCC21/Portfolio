@@ -86,6 +86,8 @@ export const listUpItemAnimations: Variants = {
 }
 
 // Constantes ahora si
+export const tailwindcssDuration = 'transition duration-125 ease-in-out'
+
 const showDefalt = {
     opacity: 1,
     translateY: 0,

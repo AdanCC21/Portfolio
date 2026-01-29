@@ -42,11 +42,11 @@ export default function Achievements({ pageRef }: Prompts) {
               </button>
             </div>
             <>
-              <div className={`absolute bg-white h-3 w-3 rounded-full translate-2
+              <div className={`absolute bg-c-inverted h-3 w-3 rounded-full translate-2
                 ${index % 2 === 0 ? 'right-1/2 translate-x-1/2'
                   : 'left-1/2 -translate-x-1/2'}`}></div>
 
-              <div className={`absolute bg-white h-full w-1 translate-y-4
+              <div className={`absolute bg-c-inverted h-full w-1 translate-y-4
                 ${index % 2 === 0 ? 'right-1/2 translate-x-1/2'
                   : 'left-1/2 -translate-x-1/2'} ${index === expList.length - 1 && 'rounded-b-full'}`}></div>
             </>

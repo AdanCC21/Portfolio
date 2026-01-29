@@ -16,24 +16,25 @@ interface Prompts {
 export default function Modal({ state, setState, children, title, onClose }: Prompts) {
     useEffect(() => {
         if (state) {
-            document.documentElement.style.overflowY = "hidden";
+            document.body.style.overflowY = "hidden";
         } else {
-            document.documentElement.style.overflowY = "";
+            document.body.style.overflowY = "";
+            return;
         }
-        if (!state) return;
 
         window.addEventListener("keydown", (e: KeyboardEvent) => { handleKey(e, setState) });
 
         return () => {
             window.removeEventListener("keydown", (e: KeyboardEvent) => { handleKey(e, setState,) });
+            document.body.style.overflowY = "";
         }
     }, [state])
 
     return (
         <AnimatePresence mode="wait">
             {state &&
-                <motion.div variants={fadeInOutAnimation} initial="hidden" animate="show" exit={"out"} 
-                className="fixed top-0 left-0 z-100 flex justify-center items-center w-screen h-screen bg-black/50 overflow-y-auto" onClick={() => { setState(false) }}>
+                <motion.div variants={fadeInOutAnimation} initial="hidden" animate="show" exit={"out"}
+                    className="fixed top-0 left-0 z-100 flex justify-center items-center w-screen h-screen bg-black/50 overflow-y-auto" onClick={() => { setState(false) }}>
                     <motion.div variants={showUp} initial="hidden" animate="show" className="flex flex-col rounded-xl bg-black/90 w-8/10 min-h-6/10" onClick={(e) => { e.stopPropagation(); }}>
                         <header className="flex justify-between bg-black px-4 py-2 rounded-t-xl">
                             <span className="text-4xl my-1">{title}</span>

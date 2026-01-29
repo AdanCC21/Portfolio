@@ -6,6 +6,7 @@ import { listUpContainerAnimations, listUpItemAnimations, pageContainerAnimation
 import { AnimatePresence, motion } from "framer-motion";
 import SkillItem from "@/components/SkillItem";
 import Carrusel from "@/components/Carrusel";
+import { useTheme } from "@/hooks/useTheme";
 
 interface Prompts {
     pageRef: RefObject<any>
@@ -14,6 +15,7 @@ interface Prompts {
 
 export default function Projects({ pageRef }: Prompts) {
     const { t } = useLanguage();
+    const {theme} = useTheme();
 
     useEffect(() => {
         const projects = getProjects(t);
@@ -56,7 +58,7 @@ export default function Projects({ pageRef }: Prompts) {
 
                         <ul className="flex gap-x-4 overflow-x-auto overflow-y-hidden">
                             {currentProject.tools.map((current) => (
-                                <SkillItem item={current} small />
+                                <SkillItem theme={theme} item={current} small />
                             ))}
                         </ul>
                     </motion.div>

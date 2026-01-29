@@ -20,66 +20,53 @@ export const skillsList: Tool[] = [
     {
         image: { src: React, alt: 'React' },
         name: 'React',
-        skillLevel: 'avarage',
     },
     {
         image: { src: Vue, alt: 'Vue' },
         name: 'Vue',
-        skillLevel: 'low',
     },
     {
         image: { src: Tailwindcss, alt: 'tailwindcss' },
         name: 'Tailwindcss',
-        skillLevel: 'avarage',
     },
     {
         image: { src: NestJs, alt: 'NestJs' },
         name: 'NestJs',
-        skillLevel: 'avarage',
     },
     {
         image: { src: Prisma, alt: 'Prisma' },
         name: 'Prisma',
-        skillLevel: 'avarage',
     },
     {
         image: { src: Mongo, alt: 'Mongo' },
         name: 'Mongo',
-        skillLevel: 'low',
     },
     {
         image: { src: Js, alt: 'JavaScript' },
         name: 'JavaScript',
-        skillLevel: 'high',
     },
     {
         image: { src: Ts, alt: 'TypeScript' },
         name: 'TypeScript',
-        skillLevel: 'high',
     },
     {
         image: { src: C, alt: 'C' },
         name: 'C',
-        skillLevel: 'avarage',
     },
     {
         image: { src: Cpp, alt: 'C++' },
         name: 'C++',
-        skillLevel: 'avarage',
     },
     {
         image: { src: Py, alt: 'Python' },
         name: 'Python',
-        skillLevel: 'low',
     },
     {
         image: { src: Html, alt: 'HTML' },
         name: 'HTML',
-        skillLevel: 'avarage',
     },
     {
         image: { src: Css, alt: 'Css' },
         name: 'Css',
-        skillLevel: 'avarage',
     },
 ];
