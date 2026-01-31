@@ -34,8 +34,8 @@ export default function Modal({ state, setState, children, title, onClose }: Pro
         <AnimatePresence mode="wait">
             {state &&
                 <motion.div variants={fadeInOutAnimation} initial="hidden" animate="show" exit={"out"}
-                    className="fixed top-0 left-0 z-100 flex justify-center items-center w-screen h-screen bg-black/50 overflow-y-auto" onClick={() => { setState(false) }}>
-                    <motion.div variants={showUp} initial="hidden" animate="show" className="flex flex-col rounded-xl bg-black/90 w-8/10 min-h-6/10" onClick={(e) => { e.stopPropagation(); }}>
+                    className="fixed top-0 left-0 z-100 flex justify-center py-2 w-screen h-screen bg-black/50 overflow-y-scroll" onClick={() => { setState(false) }}>
+                    <motion.div variants={showUp} initial="hidden" animate="show" className="flex flex-col rounded-xl bg-black/90 w-8/10 min-h-6/10 h-fit m-auto text-white" onClick={(e) => { e.stopPropagation(); }}>
                         <header className="flex justify-between bg-black px-4 py-2 rounded-t-xl">
                             <span className="text-4xl my-1">{title}</span>
                             <button className="cursor-pointer" onClick={() => { setState(false); onClose?.() }}>

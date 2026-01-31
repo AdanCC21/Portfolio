@@ -53,7 +53,7 @@ export default function Projects({ pageRef }: Prompts) {
                             <h5 className="text-2xl mb-2">{currentProject.title}</h5>
                             <p className="text-base mb-2">{currentProject.description}</p>
                             <br />
-                            <p className="text-base mb-2">{currentProject.myRol}</p>
+                            <p className="text-base mb-2">{t.projects.myRol} {currentProject.myRol}</p>
                         </div>
 
                         <ul className="flex gap-x-4 overflow-x-auto overflow-y-hidden">

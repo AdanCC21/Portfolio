@@ -1,6 +1,6 @@
 import Carrusel from "@/components/Carrusel";
 import Modal from "@/components/Modal";
-import { fadeInOutAnimation, listUpItemAnimations, viewPortAnimation } from "@/constants/animations";
+import { fadeInOutAnimation, listUpItemAnimations, tailwindcssDuration, viewPortAnimation } from "@/constants/animations";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getDate } from "@/scripts/date";
 import { getExperience, type ExperienceItem } from "@/scripts/experience";
@@ -29,8 +29,10 @@ export default function Achievements({ pageRef }: Prompts) {
       <motion.h3 variants={fadeInOutAnimation} initial="hidden" whileInView={'show'} viewport={viewPortAnimation} className="text-4xl">{t.achivement.title}</motion.h3>
       <ul className="relative flex flex-col w-full justify-between list-none">
         {expList.map((current, index) => (
-          <motion.li variants={listUpItemAnimations} initial="hidden" whileInView={"show"} viewport={{ amount: 1 }} className={`relative flex flex-row w-full gap-x-8  ${index % 2 === 0 ? 'text-end' : 'flex-row-reverse'}`}>
-            <div onClick={() => { showModal(prev => !prev); setExp(current); }} className="w-1/2">
+          <motion.li variants={listUpItemAnimations} initial="hidden" whileInView={"show"} viewport={{ amount: 1 }}
+            className={`relative flex flex-row w-full gap-x-8 ${index % 2 === 0 ? 'text-end' : 'flex-row-reverse'} `}>
+              <div onClick={() => { showModal(prev => !prev); setExp(current); }} className={`w-1/2 hover:scale-105 cursor-pointer
+              ${tailwindcssDuration} `}>
               <h4 className="text-xl">{current.title}</h4>
 
               <span className="text-sm text-[#828282]">{getDate(new Date(current.date.year, current.date.month + 1, current.date.day))}</span>

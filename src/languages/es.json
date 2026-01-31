@@ -20,19 +20,20 @@
       {
         "title": "Act One",
         "description": "Una red social diseñada para compartir historias y chismes, donde los usuarios pueden compartir sus anécdotas en un formato dividido por actos. La plataforma también incluye un modo de concentración para creadores de contenido, que permite leer las historias párrafo por párrafo, eliminando distracciones y ofreciendo una experiencia más inmersiva.",
-        "myRol": "Realicé todo el proyecto, desde la idea, planificación, diseño, backend, frontend y base de datos."
+        "myRol": "Analista, Diseñador, Full Stack."
       },
       {
         "title": "Gestion De Pruebas",
-        "description": "Un proyecto para el Departamento de Desarrollo de Software de la Universidad Autonoma de Baja California, un Gestor De Pruebas de proyectos que se lleven acabo dentro del mismo departamento. Donde un Lider de desarrollo puede registrar su proyecto y enviarlo a pruebas. El Lider de pruebas puede recibir ese proyecto y comenzar las pruebas, conforme vaya haciendo estas pruebas el puede agregar actualizaciones sobre las pruebas, agregar reportes, enlaces y regresar el proyecto para que hagan correcciones.",
-        "myRol": "Durante los primeros 4 meses fui Full Stack en un equipo de 2 personas, yo me encargue de todo el codigo y mi compañero de la documentación. Actualmente continuamos con el desarrollo pero desde inicios de enero de 2026, mi compañero comenzo a escribir codigo."
+        "description": "Proyecto para el Departamento de Desarrollo de Software de la Universidad Autónoma de Baja California, consistente en un Gestor de Pruebas para los proyectos que se desarrollan dentro del mismo departamento.\nEste proyecto surgió debido a la falta de formalidad en el proceso de solicitud y gestión de pruebas dentro de los proyectos.",
+        "myRol": "Diseñador, Full Stack."
       },
       {
         "title": "Wolf Forest",
-        "description": "Es un sitio web donde puedes mejorar tus personajes ficticios para enfrentarlos en una batalla campal. A lo largo de varios días y noches, se producen eventos especiales como muertes, asesinatos, alianzas temporales y recolección de objetos, creando una narrativa dinámica y llena de sorpresas.",
-        "myRol": "Realicé todo este proyecto, lo desarrollé durante las vacaciones para aprender JavaScript."
+        "description": "Es un sitio web donde puedes mejorar tus personajes ficticios para enfrentarlos en una batalla campal. Conforme vas jugando, se producen eventos especiales como muertes, asesinatos, alianzas temporales y recolección de objetos, creando una narrativa dinámica y aleatoria.",
+        "myRol": "Diseñador, Full Stack."
       }
     ],
+    "myRol":"Mis roles fueron : ",
     "code": "Código",
     "goTo": "Ver"
   },
@@ -76,6 +77,6 @@
     "contact": "Contacto",
     "fontAndIcons": "Fuente e iconos de ",
     "googleFont": "Google Fonts",
-    "madeWith":"Hecho con React + Vite, Tailwindcss, framer-motion y TypeScript"
+    "madeWith": "Hecho con React + Vite, Tailwindcss, framer-motion y TypeScript"
   }
 }

@@ -20,19 +20,20 @@
       {
         "title": "Act One",
         "description": "A social network designed to share stories and gossip, where users can tell their anecdotes in a format divided by acts. The platform also includes a 'focus mode' intended for content creators, which allows reading stories paragraph by paragraph, eliminating distractions for a more immersive experience.",
-        "myRol": "I carried out the entire project, from the idea, planning, design, backend, frontend, and database."
+        "myRol": "Analyst, Designer, Full Stack."
       },
       {
         "title": "Gestion De Pruebas",
         "description": "A project for the Software Development Department of the Autonomous University of Baja California, a Project Testing Manager for projects carried out within the department. A Development Lead can register their project and send it for testing. The Testing Lead can receive the project and start the testing process. As they perform these tests, they can add updates about the tests, include reports, links, and send the project back for corrections.",
-        "myRol": "During the first 4 months, I worked as a Full Stack developer in a 2-person team. I was responsible for all the code, while my teammate handled the documentation. We are currently continuing development, but since early January 2026, my teammate started writing code as well."
+        "myRol": "Designer, Full Stack."
       },
       {
         "title": "Wolf Forest",
         "description": "It is a website where you can update your fictional characters to face off in a battle royale. Over several days and nights, special events such as deaths, murders, temporary alliances, and item collection take place, creating a dynamic and surprise-filled narrative.",
-        "myRol": "I carried out this entire project, developing it during vacations to learn JavaScript."
+        "myRol": "Designer, Full Stack."
       }
     ],
+    "myRol":"My roles were : ",
     "code": "Code",
     "goTo": "View"
   },
