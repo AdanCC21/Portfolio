@@ -19,11 +19,13 @@ export default function Carrusel({ images }: Prompts) {
     return (
         <>
             <ImageModal state={imgModalState} setState={showImgModal} images={images} currentIndex={currentImage.index} />
-            <button className="cursor-pointer" onClick={() => { handleMove(false, images.length, setImage) }}>
-                <span className="text-base">
-                    {'<'}
-                </span>
-            </button>
+            {images.length > 1 &&
+                <button className="cursor-pointer" onClick={() => { handleMove(false, images.length, setImage) }}>
+                    <span className="text-base">
+                        {'<'}
+                    </span>
+                </button>
+            }
 
             <motion.div key={currentImage.index} variants={fadeInOutAnimation} initial="hidden" animate="show"
                 className="flex flex-col items-center justify-center w-8/10 h-full gap-y-3">
@@ -32,7 +34,7 @@ export default function Carrusel({ images }: Prompts) {
                         <div className="w-4 h-4 border-4 border-c-inverted border-t-transparent rounded-full animate-spin"></div>
                     </div>
                 }
-                <img onLoad={() => { setImage(prev => ({ ...prev, loading: false })) }} className="w-fit h-8/10 cursor-pointer rounded-lg" src={images[currentImage.index]} onClick={() => { showImgModal(!imgModalState) }} />
+                <img onLoad={() => { setImage(prev => ({ ...prev, loading: false })) }} className="w-fit h-8/10 cursor-pointer rounded-lg overflow-hidden" src={images[currentImage.index]} onClick={() => { showImgModal(!imgModalState) }} />
 
                 <ul className="flex gap-x-2">
                     {images.map((_, index) => (
@@ -41,11 +43,13 @@ export default function Carrusel({ images }: Prompts) {
                 </ul>
             </motion.div>
 
-            <button className="cursor-pointer" onClick={() => { handleMove(true, images.length, setImage) }}>
-                <span className="text-base">
-                    {'>'}
-                </span>
-            </button>
+            {images.length > 1 &&
+                <button className="cursor-pointer" onClick={() => { handleMove(true, images.length, setImage) }}>
+                    <span className="text-base">
+                        {'>'}
+                    </span>
+                </button>
+            }
         </>
     )
 }

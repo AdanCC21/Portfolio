@@ -34,7 +34,8 @@ export const pageContainerAnimation: Variants = {
 }
 
 export const viewPortAnimation: ViewportOptions = {
-    amount: 0.2
+    amount: 0.2,
+    once:true
 }
 
 export const listRightContainerAnimation: Variants = {

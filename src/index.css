@@ -35,7 +35,8 @@ body {
 html {
   font-size: 16px;
 
-  .pagePadding{
+
+  .pagePadding {
     padding: 2% 10%;
   }
 
@@ -43,8 +44,10 @@ html {
     font-size: 22px;
   }
 
-  scrollbar-color: rgba(120,120,120,1) transparent;
+  @media(max-width:420px) {
+    font-size: 18px;
+  }
+
+  scrollbar-color: rgba(120, 120, 120, 1) transparent;
   scrollbar-width: thin;
 }
-
-

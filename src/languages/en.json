@@ -24,7 +24,7 @@
       },
       {
         "title": "Gestion De Pruebas",
-        "description": "A project for the Software Development Department of the Autonomous University of Baja California, a Project Testing Manager for projects carried out within the department. A Development Lead can register their project and send it for testing. The Testing Lead can receive the project and start the testing process. As they perform these tests, they can add updates about the tests, include reports, links, and send the project back for corrections.",
+        "description": "Project for the Software Development Department of the Autonomous University of Baja California, consisting of a Test Management System for the projects developed within the department.\nThis project arose due to the lack of formality in the process of requesting and managing tests within projects.",
         "myRol": "Designer, Full Stack."
       },
       {

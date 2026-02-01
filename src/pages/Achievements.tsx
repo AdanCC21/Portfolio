@@ -26,18 +26,20 @@ export default function Achievements({ pageRef }: Prompts) {
 
   return (
     <section ref={pageRef} className="flex flex-col pagePadding">
-      <motion.h3 variants={fadeInOutAnimation} initial="hidden" whileInView={'show'} viewport={viewPortAnimation} className="text-4xl">{t.achivement.title}</motion.h3>
+      <motion.h3 variants={fadeInOutAnimation} initial="hidden" whileInView={'show'} viewport={viewPortAnimation} className="text-4xl mb-4">{t.achivement.title}</motion.h3>
       <ul className="relative flex flex-col w-full justify-between list-none">
         {expList.map((current, index) => (
-          <motion.li variants={listUpItemAnimations} initial="hidden" whileInView={"show"} viewport={{ amount: 1 }}
+          <motion.li variants={listUpItemAnimations} initial="hidden" whileInView={"show"} viewport={{ amount: 1, once: true }}
             className={`relative flex flex-row w-full gap-x-8 ${index % 2 === 0 ? 'text-end' : 'flex-row-reverse'} `}>
-              <div onClick={() => { showModal(prev => !prev); setExp(current); }} className={`w-1/2 hover:scale-105 cursor-pointer
+            <div onClick={() => { showModal(prev => !prev); setExp(current); }} className={`w-1/2 hover:scale-102 cursor-pointer
               ${tailwindcssDuration} `}>
               <h4 className="text-xl">{current.title}</h4>
 
               <span className="text-sm text-[#828282]">{getDate(new Date(current.date.year, current.date.month + 1, current.date.day))}</span>
 
-              <p className="text-base line-clamp-2 text-start" >{current.description}</p>
+              <div className="hidden md:block">
+                <p className="text-base line-clamp-2 text-start" >{current.description}</p>
+              </div>
 
               <button className={`flex w-full ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}>
                 <span className="text-xs">View More</span>

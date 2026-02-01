@@ -14,6 +14,7 @@ export function handleKey(e: KeyboardEvent, setModal: Dispatch<SetStateAction<bo
             break;
         case "Escape":
             setModal(false)
+            e.stopPropagation();
             break;
     }
 }

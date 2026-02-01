@@ -15,12 +15,15 @@ interface Prompts {
 
 export default function Projects({ pageRef }: Prompts) {
     const { t } = useLanguage();
-    const {theme} = useTheme();
+    const { theme } = useTheme();
 
     useEffect(() => {
         const projects = getProjects(t);
         setProjectsList(projects);
-        setCurrentProject(projects[0])
+        setCurrentProject(prev => {
+            let project = projects.find(prj => prj.imagesFolder === prev.imagesFolder);
+            return project ? project : projects[0];
+        })
     }, [t])
 
     const [projects, setProjectsList] = useState<Project[]>(getProjects(t))
@@ -33,7 +36,7 @@ export default function Projects({ pageRef }: Prompts) {
             initial="hidden"
             whileInView="show"
             viewport={viewPortAnimation}
-            className="flex flex-col min-h-[80vh] py-[5%] pagePadding">
+            className="flex flex-col min-h-screen py-[5%] pagePadding">
             <h3 className="text-4xl font-bold mb-4">{t.projects.title}</h3>
             <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}
                 className="flex flex-nowrap h-14 md:h-8 w-full items-end border-b-2 border-c-inverted mb-4 overflow-x-auto overflow-y-hidden">
