@@ -22,7 +22,7 @@ export default function About({ pageRef }: Prompts) {
             <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='flex flex-col flex-2 justify-center'>
                 <motion.div variants={listUpItemAnimations} className='flex gap-x-4'>
                     <h3 className='text-4xl font-bold mb-4'>{t.aboutMe.title}</h3>
-                    <img src='draws/Proud.webp' alt='draw de hecho' className='h-10 w-fit' />
+                    <img src='draws/Proud.webp' alt='draw de hecho' className='max-h-10 w-fit' />
                 </motion.div>
                 
                 <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='relative md:hidden flex w-full h-full items-center justify-center my-4'>
