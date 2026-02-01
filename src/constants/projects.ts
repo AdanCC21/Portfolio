@@ -32,7 +32,7 @@ const wolfForest: ProjectItem = {
 }
 
 const gestionPruebas: ProjectItem = {
-    title: "Gestion De Pruebas", code: '', page: '', imagesFolder: 'wolfForest',  tools: [
+    title: "Gestion De Pruebas", code: '', page: '', imagesFolder: 'tickets', tools: [
         { image: { src: Ts, alt: "typescript" }, name: "TypeScript" },
         { image: { src: React, alt: "React" }, name: "React" },
         { image: { src: Tailwindcss, alt: "Tailwindcss" }, name: "Tailwindcss" },
@@ -41,5 +41,6 @@ const gestionPruebas: ProjectItem = {
         { image: { src: Keycloak, alt: "keycloak" }, name: "Keycloak" },
     ]
 }
+
 
 export const detailsProjects = [actOne, wolfForest, gestionPruebas];

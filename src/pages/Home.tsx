@@ -18,7 +18,7 @@ export default function Home({ pageRef }: Prompts) {
       <div className="flex flex-col md:flex-row md:items-center md:justify-start justify-center w-full h-full md:h-6/10">
         <motion.div
           variants={baseAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}
-          className="relative flex flex-col items-center justify-center w-4/10 h-4/10 sm:h-5/10 md:h-full">
+          className="relative flex flex-col items-center justify-center md:w-4/10 my-4 h-4/10 sm:h-5/10 md:h-full">
           <img src='/draw.png' className="max-h-full max-w-full" />
           <img src={ProfileLine} alt="decoration" className={`${theme === 'dark' && 'invert'} w-2/3`} />
         </motion.div>
@@ -26,16 +26,18 @@ export default function Home({ pageRef }: Prompts) {
         <motion.div
           variants={listUpContainerAnimations}
           initial="hidden" animate="show" viewport={viewPortAnimation}
-          className="flex flex-col w-8/10 gap-y-4 justify-center ">
+          className="flex flex-col md:w-8/10 gap-4 justify-center">
 
           <motion.div variants={listUpItemAnimations}
-            className="relative flex w-full">
+            className="relative w-fit">
             <h2 className="text-5xl md:text-6xl">{t.global.name}</h2>
-            <img src="/draws/Neutral.webp" className="absolute h-12 top-0 right-0" />
           </motion.div>
 
-          <motion.h5 variants={listUpItemAnimations}
-            className="text-2xl">{t.global.profession}</motion.h5>
+          <motion.div variants={listUpItemAnimations} className="relative">
+            <h5 className="relative text-2xl">
+              {t.global.profession}
+            </h5>
+          </motion.div>
         </motion.div>
       </div>
     </section>
