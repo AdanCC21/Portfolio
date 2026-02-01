@@ -49,7 +49,7 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
       </div>
 
       <div className='md:hidden relative cursor-pointer' onClick={() => { showMenu(prev => !prev) }}>
-        <img src={Menu} alt='menu' className={`${theme !== 'dark' && 'invert'}`} />
+        <img src={Menu} alt='menu' className={`${theme !== 'dark' && 'invert'} w-fit h-fit max-h-[80%] cursor-pointer rounded-lg overflow-hidden`} />
         {viewMenu &&
           <div className='absolute flex gap-x-4 bg-c-bg border border-[#ccc] rounded-lg rounded-tl-none z-51'>
             <ul className='flex flex-col w-fit list-none'>
