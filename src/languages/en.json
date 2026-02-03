@@ -67,7 +67,8 @@
         },
         "description": "I carried out the design of a ticket management system for tracking tasks within a department. The project included the design of the database infrastructure, covering the selection of the database manager, table normalization, and the creation of relationships between tables.\n\n Additionally, I designed the application interface using the University’s institutional colors and user experience (UX) principles. I developed the frontend with a responsive approach to ensure compatibility across multiple devices, as well as the backend responsible for database consumption and communication with the frontend.\n\n The project was developed using tools and technologies such as React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak."
       }
-    ]
+    ],
+    "viewMore":"View More"
   },
   "aboutMe": {
     "title": "About Me",

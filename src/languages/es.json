@@ -67,7 +67,8 @@
         },
         "description": "Llevé a cabo el diseño de un sistema gestor de tickets para el seguimiento de tareas dentro de un departamento. El proyecto incluyó el diseño de la infraestructura de base de datos, abarcando la selección del gestor, la normalización de tablas y la creación de relaciones entre ellas.\n\n Además, diseñé la interfaz de la aplicación utilizando los colores institucionales de la Universidad y principios de experiencia de usuario (UX). Desarrollé el frontend con un enfoque responsive para asegurar su correcto funcionamiento en múltiples dispositivos, así como el backend encargado de la comunicación con la base de datos y el frontend.\n\n Para el desarrollo del proyecto utilicé herramientas y tecnologías como React + Vite, NestJS, Prisma, Figma, Lucidchart y Keycloak."
       }
-    ]
+    ],
+    "viewMore":"Ver Mas"
   },
   "aboutMe": {
     "title": "Sobre Mi",

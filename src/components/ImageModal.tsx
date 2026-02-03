@@ -43,7 +43,9 @@ export default function ImageModal({ state, setState, images, currentIndex = 0 }
                         <span className="text-xl">X</span>
                     </motion.button>
 
-                    <ImgModalBtn onClick={(e) => { handleMove(false, images.length, setImage); e.stopPropagation(); }} text="<" />
+                    {images.length > 1 &&
+                        <ImgModalBtn onClick={(e) => { handleMove(false, images.length, setImage); e.stopPropagation(); }} text="<" />
+                    }
 
                     <main className="flex justify-center items-center w-9/10 h-full p-4" >
                         {currentImage.loading &&
@@ -52,7 +54,9 @@ export default function ImageModal({ state, setState, images, currentIndex = 0 }
                         <img onLoad={() => { setImage(prev => ({ ...prev, loading: false })) }} className={`${currentImage.loading && 'hidden'} max-w-8/10 max-h-8/10 rounded-lg shadow-sm`} src={images[currentImage.index]} onClick={(e) => { e.stopPropagation() }} />
                     </main>
 
-                    <ImgModalBtn onClick={(e) => { handleMove(true, images.length, setImage); e.stopPropagation(); }} text=">" />
+                    {images.length > 1 &&
+                        <ImgModalBtn onClick={(e) => { handleMove(true, images.length, setImage); e.stopPropagation(); }} text=">" />
+                    }
                 </motion.div>
             }
         </AnimatePresence>

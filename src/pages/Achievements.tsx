@@ -42,7 +42,7 @@ export default function Achievements({ pageRef }: Prompts) {
               </div>
 
               <button className={`flex w-full ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}>
-                <span className="text-xs">View More</span>
+                <span className="text-xs">{t.achivement.viewMore}</span>
               </button>
             </div>
             <>
