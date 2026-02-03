@@ -36,7 +36,7 @@ export default function Projects({ pageRef }: Prompts) {
             initial="hidden"
             whileInView="show"
             viewport={viewPortAnimation}
-            className="flex flex-col min-h-screen py-[5%] pagePadding">
+            className="flex flex-col py-[5%] pagePadding">
             <h3 className="text-4xl font-bold mb-4">{t.projects.title}</h3>
             <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}
                 className="flex flex-nowrap h-14 md:h-8 w-full items-end border-b-2 border-c-inverted mb-4 overflow-x-auto overflow-y-hidden">

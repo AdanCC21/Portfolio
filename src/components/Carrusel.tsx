@@ -14,11 +14,8 @@ export default function Carrusel({ images }: Prompts) {
 
     useEffect(() => {
         setImage({ index: 0, loading: true });
+        setTimeout(() => { setImage(prev => ({ ...prev, loading: false })) }, 500)
     }, [images])
-
-    useEffect(() => {
-        setImage(prev => ({ ...prev, loading: false }))
-    }, [])
 
     return (
         <>
@@ -32,15 +29,17 @@ export default function Carrusel({ images }: Prompts) {
             }
 
             <motion.div key={currentImage.index} variants={fadeInOutAnimation} initial="hidden" animate="show"
-                className="flex flex-col items-center justify-center w-8/10 h-full gap-y-3">
+                className="relative flex flex-col items-center justify-center w-8/10 h-full gap-y-3 mx-auto">
+                
+                <img onLoad={() => { setImage(prev => ({ ...prev, loading: false })) }} className={`${currentImage.loading && 'hidden'} w-auto max-h-45 md:max-h-[80%]  cursor-pointer rounded-lg overflow-hidden`} src={images[currentImage.index]} onClick={() => { showImgModal(!imgModalState) }} />
+
                 {currentImage.loading &&
-                    <div className="h-full">
-                        <div className="w-4 h-4 border-4 border-c-inverted border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-full flex h-45 items-center justify-center">
+                        <div className=" w-4 h-4 border-4 border-c-inverted border-t-transparent rounded-full animate-spin"></div>
                     </div>
                 }
-                <img onLoad={() => { setImage(prev => ({ ...prev, loading: false })) }} className="w-fit h-fit md:h-[80%] cursor-pointer rounded-lg overflow-hidden" src={images[currentImage.index]} onClick={() => { showImgModal(!imgModalState) }} />
 
-                <ul className="flex gap-x-2">
+                <ul className="h-fit flex gap-x-2">
                     {images.map((_, index) => (
                         <span className={`${index === currentImage.index && 'text-c-inverted'} cursor-pointer`} onClick={() => { setImage(prev => ({ ...prev, index })) }}> - </span>
                     ))}
