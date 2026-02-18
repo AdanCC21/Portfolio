@@ -26,7 +26,6 @@ export default function Skills({ pageRef }: Prompts) {
             viewport={viewPortAnimation}
             className="flex flex-col min-h-[50vh] py-[5%] pagePadding">
             <h2 className="text-4xl font-semibold mb-2">{t.skills.title}</h2>
-            <span className="text-base font-normal mb-4">{t.skills.description}</span>
 
             <motion.ul variants={listRightContainerAnimation}
                 initial="hidden"

@@ -37,8 +37,8 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
         </button>
         <ul className='flex gap-x-4 '>
           <HeaderItem theme={theme} text={t.header.home} onClick={() => { goTo(homeRef) }} />
-          <HeaderItem theme={theme} text={t.header.skills} onClick={() => { goTo(skillsRef) }} />
           <HeaderItem theme={theme} text={t.header.projects} onClick={() => { goTo(projectsRef) }} />
+          <HeaderItem theme={theme} text={t.header.skills} onClick={() => { goTo(skillsRef) }} />
           <HeaderItem theme={theme} text={t.header.achivement} onClick={() => { goTo(achivementRef) }} />
           <HeaderItem theme={theme} text={t.header.aboutMe} onClick={() => { goTo(aboutRef) }} />
         </ul>

@@ -52,7 +52,7 @@ export default function About({ pageRef }: Prompts) {
 
             <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='hidden relative md:flex flex-1 items-center'>
                 <motion.div variants={listUpItemAnimations} className='relative w-fit h-fit'>
-                    <img alt='yo' src='yo3.webp' className='rounded-full ' />
+                    <img alt='yo' src='yo.webp' className='rounded-full ' />
                     <img alt='draw' src='draws/Music2.webp' className='absolute h-16 sm:h-12 right-0 bottom-0 ' />
                 </motion.div>
             </motion.div>

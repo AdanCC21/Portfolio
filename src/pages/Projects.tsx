@@ -36,7 +36,7 @@ export default function Projects({ pageRef }: Prompts) {
             initial="hidden"
             whileInView="show"
             viewport={viewPortAnimation}
-            className="flex flex-col py-[5%] pagePadding">
+            className="flex flex-col py-[5%] pagePadding md:h-screen">
             <h3 className="text-4xl font-bold mb-4">{t.projects.title}</h3>
             <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}
                 className="flex flex-nowrap h-14 md:h-8 w-full items-end border-b-2 border-c-inverted mb-4 overflow-x-auto overflow-y-hidden">
@@ -50,9 +50,9 @@ export default function Projects({ pageRef }: Prompts) {
                 ))}
             </motion.ul>
             <AnimatePresence mode="wait">
-                <motion.section key={currentProject.title} variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className="flex flex-col md:grid md:grid-cols-2 gap-8 flex-1">
+                <motion.section key={currentProject.title} variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className="flex flex-col md:grid md:grid-cols-2 gap-8 sm:h-4/1 md:h-7/10 ">
                     <motion.div variants={listUpItemAnimations} className="flex flex-col h-full justify-between">
-                        <div className="flex flex-col">
+                        <div className="flex flex-col overflow-y-auto">
                             <h5 className="text-2xl mb-2">{currentProject.title}</h5>
                             <p className="text-base mb-2">{currentProject.description}</p>
                             <br />
