@@ -1,14 +1,14 @@
 {
   "global": {
     "name": "Adan Gonzalez Ceseña",
-    "profession": "Software and emerging technologies engineer"
+    "profession": "Software Engineer in Emerging Technologies"
   },
   "header": {
     "home": "Home",
     "skills": "Skills",
     "projects": "Projects",
-    "achivement": "Record",
-    "aboutMe": "About me"
+    "achivement": "Experience",
+    "aboutMe": "About Me"
   },
   "skills": {
     "title": "Skills"
@@ -18,26 +18,26 @@
     "projectslist": [
       {
         "title": "Act One",
-        "description": "A social network designed to share stories and gossip, where users can tell their anecdotes in a format divided by acts. The platform also includes a 'focus mode' intended for content creators, which allows reading stories paragraph by paragraph, eliminating distractions for a more immersive experience.",
+        "description": "A social network designed to share stories and gossip, where users can share their anecdotes in a format divided into acts. The platform also includes a focus mode for content creators, allowing stories to be read paragraph by paragraph, removing distractions and providing a more immersive experience.",
         "myRol": "Analyst, Designer, Full Stack."
       },
       {
-        "title": "Gestion De Pruebas",
-        "description": "Project for the Software Development Department of the Autonomous University of Baja California, consisting of a Test Management System for the projects developed within the department.\nThis project arose due to the lack of formality in the process of requesting and managing tests within projects.",
+        "title": "Gestión de Pruebas",
+        "description": "This project is currently classified, but it was requested by the UABC Software Development Department. I was responsible for the database design, code development, and the initial system designs. If you need more information about this project, send me an email and we can talk.",
         "myRol": "Designer, Full Stack."
       },
       {
         "title": "Wolf Forest",
-        "description": "It is a website where you can update your fictional characters to face off in a battle royale. Over several days and nights, special events such as deaths, murders, temporary alliances, and item collection take place, creating a dynamic and surprise-filled narrative.",
+        "description": "It is a website where you can improve your fictional characters to face them in a battle royale. As you keep playing, special events occur such as deaths, murders, temporary alliances, and item collection, creating a dynamic and random narrative.",
         "myRol": "Designer, Full Stack."
       }
     ],
-    "myRol":"My roles were : ",
+    "myRol": "My roles were: ",
     "code": "Code",
     "goTo": "View"
   },
   "achivement": {
-    "title": "Record",
+    "title": "Experience",
     "achivementsList": [
       {
         "title": "TalentLand",
@@ -46,16 +46,16 @@
           "month": 3,
           "year": 2025
         },
-        "description": "In 2025, along with a group of friends from university, we went to the Hackathon at Expo Guadalajara 2025. \n There were several tracks within this hackathon, and we chose the McDonald's track. McDonald's wanted an app that would make the food-buying experience unforgettable. \n\n Our idea was to present an app more focused on accessibility, with a bot that guides you through the entire application and offers options to manage the app based on the user's disabilities (deaf, blind, motor impairment). Unfortunately, we didn't make it to the finals, but we were among the 500 people selected from 1,500 applicants."
+        "description": "In 2025 I participated with friends from university in the TalentLand hackathon at Expo Guadalajara, within the McDonald's track. We proposed an accessibility-focused application that would help users navigate the app through a bot and options adapted to different disabilities. Although we did not reach the finals, we were part of the 500 participants selected from 1500 applicants."
       },
       {
-        "title": "Nasa APP Space Challenge",
+        "title": "Nasa Space APP Challenge",
         "date": {
           "day": 4,
           "month": 9,
           "year": 2025
         },
-        "description": "On October 4th and 5th, 2025, my team and I participated in an event organized by NASA, where participants were challenged to develop an application based on different prompts available on their platform. \n\nWe chose the weather app challenge, which focused on providing recommendations or warnings based on the user’s daily plans and current weather conditions. For example, if a user plans an outdoor event, the application may suggest moving it to a covered location in case of heavy rain or strong winds. \n\n Although we did not place due to our limited experience in mobile development, the experience was highly enriching, and some classmates from my group advanced to the national stage."
+        "description": "On October 4 and 5, 2025, I participated in the NASA Space Apps Challenge with my team. We developed a weather application idea that provides recommendations based on the user's plans and weather conditions. Although we did not obtain a winning place, the experience was very enriching."
       },
       {
         "title": "Becario",
@@ -64,19 +64,19 @@
           "month": 8,
           "year": 2025
         },
-        "description": "I carried out the design of a ticket management system for tracking tasks within a department. The project included the design of the database infrastructure, covering the selection of the database manager, table normalization, and the creation of relationships between tables.\n\n Additionally, I designed the application interface using the University’s institutional colors and user experience (UX) principles. I developed the frontend with a responsive approach to ensure compatibility across multiple devices, as well as the backend responsible for database consumption and communication with the frontend.\n\n The project was developed using tools and technologies such as React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak."
+        "description": "I developed a test management system for project tracking. I participated in the database design, user interface design, and both frontend and backend development. The project was developed using React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak."
       }
     ],
-    "viewMore":"View More"
+    "viewMore": "View More"
   },
   "aboutMe": {
     "title": "About Me",
-    "description": "I am a student at the Universidad Autónoma de Baja California, pursuing a degree in Software Engineering and Emerging Technologies, with an expected graduation date in 2026. My professional interests are focused on frontend and backend web development, using modern tools and technologies such as React, Vue, NestJS, JavaScript, and TypeScript.\n\nI consider myself a calm, responsible, and hardworking person, eager to learn new technologies. I am open to exploring job opportunities related to programming and work collaboratively in team environments.\n\nIn my free time, I enjoy listening to all kinds of music—especially Arctic Monkeys and Joji—going out for coffee with classmates, and watching movies or TV series with my girlfriend."
+    "description": "I studied Software Engineering in Emerging Technologies. My professional focus is oriented toward frontend and backend web development, using modern tools and technologies such as React, Vue, NestJS, JavaScript, and TypeScript.\n\nI consider myself a calm, responsible person with a strong willingness to learn new technologies. I am open to exploring job opportunities related to programming and working in a team."
   },
-  "footer":{
-    "contact":"Contact",
-    "fontAndIcons":"Font and icons from ",
-    "googleFont" : "Google Fonts",
-    "madeWith":"Made with React + Vite, Tailwindcss, framer-motion and TypeScript"
+  "footer": {
+    "contact": "Contact",
+    "fontAndIcons": "Font and icons from ",
+    "googleFont": "Google Fonts",
+    "madeWith": "Made with React + Vite, TailwindCSS, Framer Motion, and TypeScript"
   }
 }

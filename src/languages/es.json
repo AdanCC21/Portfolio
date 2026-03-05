@@ -1,14 +1,14 @@
 {
   "global": {
     "name": "Adan Gonzalez Ceseña",
-    "profession": "Ingeniero en Software y Tecnologias Emergentes"
+    "profession": "Ingeniero en Software y Tecnologías Emergentes"
   },
   "header": {
     "home": "Inicio",
     "skills": "Habilidades",
     "projects": "Proyectos",
-    "achivement": "Historial",
-    "aboutMe": "Sobre mi"
+    "achivement": "Experiencia",
+    "aboutMe": "Sobre mí"
   },
   "skills": {
     "title": "Habilidades"
@@ -22,8 +22,8 @@
         "myRol": "Analista, Diseñador, Full Stack."
       },
       {
-        "title": "Gestion De Pruebas",
-        "description": "Proyecto para el Departamento de Desarrollo de Software de la Universidad Autónoma de Baja California, consistente en un Gestor de Pruebas para los proyectos que se desarrollan dentro del mismo departamento.\nEste proyecto surgió debido a la falta de formalidad en el proceso de solicitud y gestión de pruebas dentro de los proyectos.",
+        "title": "Gestión de Pruebas",
+        "description": "Este proyecto actualmente es clasificado, pero fue solicitado por el Departamento de Desarrollo de Software de la UABC. Me encargué de llevar a cabo el diseño de la base de datos, desarrollo de código y los diseños iniciales del sistema. Si necesitas más información sobre este proyecto, envíame un correo y podemos hablar.",
         "myRol": "Diseñador, Full Stack."
       },
       {
@@ -32,12 +32,12 @@
         "myRol": "Diseñador, Full Stack."
       }
     ],
-    "myRol":"Mis roles fueron : ",
+    "myRol": "Mis roles fueron: ",
     "code": "Código",
     "goTo": "Ver"
   },
   "achivement": {
-    "title": "Historial",
+    "title": "Experiencia",
     "achivementsList": [
       {
         "title": "TalentLand",
@@ -46,16 +46,16 @@
           "month": 3,
           "year": 2025
         },
-        "description": "En 2025, junto a un grupo de amigos de la universidad, fuimos al Hackathon de la Expo Guadalajara 2025, dentro de este hackathon hubo varios tracks, nosotros fuimos por el track de McDonald's. \n\n Lo que quería McDonald’s era una aplicación que haga inolvidable la experiencia de comprar comida. Nuestra idea era presentar una aplicación más orientada a la accesibilidad, con un bot que te guíe por toda la aplicación y que está misma presente opciones para manejar la app según las discapacidades que el usuario cuente (sordo, ciego, motriz). \n\n Lamentablemente no pasamos a finales, pero sí fuimos parte de las 500 personas que fueron seleccionadas de los 1500 solicitantes."
+        "description": "En 2025 participé junto a amigos de la universidad en el hackathon de TalentLand en la Expo Guadalajara, dentro del track de McDonald's. Propusimos una aplicación enfocada en accesibilidad que ayudara a los usuarios a navegar la app mediante un bot y opciones adaptadas a distintas discapacidades. Aunque no llegamos a la final, fuimos parte de los 500 participantes seleccionados entre 1500 solicitantes."
       },
       {
-        "title": "Nasa APP Space Challenge",
+        "title": "Nasa Space APP Challenge",
         "date": {
           "day": 4,
           "month": 9,
           "year": 2025
         },
-        "description": "El 4 y 5 de octubre de 2025, mi equipo y yo participamos en un evento organizado por la NASA, en el que se propone desarrollar una aplicación a partir de distintos retos disponibles en su plataforma. \n\n Elegimos el reto de una aplicación del clima que, a partir de los planes del usuario, ofrece recomendaciones o advertencias según las condiciones meteorológicas. Por ejemplo, si el usuario planea un evento al aire libre, la aplicación puede sugerir cambiar a un lugar techado en caso de lluvias o vientos fuertes. \n\nAunque no obtuvimos un lugar ganador debido a nuestra limitada experiencia en desarrollo móvil, la experiencia fue muy enriquecedora y algunos compañeros de mi salón lograron avanzar a la etapa nacional."
+        "description": "El 4 y 5 de octubre de 2025 participé en el NASA Space Apps Challenge junto a mi equipo. Desarrollamos una idea de aplicación del clima que ofrece recomendaciones basadas en los planes del usuario y las condiciones meteorológicas. Aunque no obtuvimos un lugar ganador, la experiencia fue muy enriquecedora."
       },
       {
         "title": "Becario",
@@ -64,19 +64,19 @@
           "month": 8,
           "year": 2025
         },
-        "description": "Llevé a cabo el diseño de un sistema gestor de tickets para el seguimiento de tareas dentro de un departamento. El proyecto incluyó el diseño de la infraestructura de base de datos, abarcando la selección del gestor, la normalización de tablas y la creación de relaciones entre ellas.\n\n Además, diseñé la interfaz de la aplicación utilizando los colores institucionales de la Universidad y principios de experiencia de usuario (UX). Desarrollé el frontend con un enfoque responsive para asegurar su correcto funcionamiento en múltiples dispositivos, así como el backend encargado de la comunicación con la base de datos y el frontend.\n\n Para el desarrollo del proyecto utilicé herramientas y tecnologías como React + Vite, NestJS, Prisma, Figma, Lucidchart y Keycloak."
+        "description": "Desarrollé un sistema gestor de pruebas para el seguimiento de proyeecto. Participé en el diseño de la base de datos, la interfaz de usuario y el desarrollo frontend y backend. El proyecto fue desarrollado utilizando React + Vite, NestJS, Prisma, Figma, Lucidchart y Keycloak."
       }
     ],
-    "viewMore":"Ver Mas"
+    "viewMore": "Ver Más"
   },
   "aboutMe": {
-    "title": "Sobre Mi",
-    "description": "Soy estudiante de la Universidad Autónoma de Baja California, donde curso la carrera de Ingeniería en Software y Tecnologías Emergentes, con fecha estimada de graduación en 2026. Mi enfoque profesional está orientado al desarrollo web frontend y backend, utilizando herramientas y tecnologías modernas como React, Vue, NestJS, JavaScript y TypeScript.\n\nMe considero una persona tranquila, responsable y con una gran disposición para aprender nuevas tecnologías. Estoy abierto a explorar oportunidades laborales relacionadas con la programación y trabajar en equipo.\n\nEn mi tiempo libre, me gusta escuchar todo tipo de música, especialmente Arctic Monkeys y Joji, salir a tomar café con mis compañeros y ver películas o series con mi pareja."
+    "title": "Sobre mí",
+    "description": "Curse la carrera de Ingeniería en Software y Tecnologías Emergentes. Mi enfoque profesional está orientado al desarrollo web frontend y backend, utilizando herramientas y tecnologías modernas como React, Vue, NestJS, JavaScript y TypeScript.\n\nMe considero una persona tranquila, responsable y con una gran disposición para aprender nuevas tecnologías. Estoy abierto a explorar oportunidades laborales relacionadas con la programación y trabajar en equipo."
   },
   "footer": {
     "contact": "Contacto",
     "fontAndIcons": "Fuente e iconos de ",
     "googleFont": "Google Fonts",
-    "madeWith": "Hecho con React + Vite, Tailwindcss, framer-motion y TypeScript"
+    "madeWith": "Hecho con React + Vite, TailwindCSS, Framer Motion y TypeScript"
   }
 }

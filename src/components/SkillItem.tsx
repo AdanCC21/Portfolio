@@ -31,7 +31,7 @@ export default function SkillItem({ item, small, theme }: SkillItemPropmts) {
 }
 
 function setSkillDecoration(text: string, theme: ThemeType) {
-    const className = `${theme ? 'invert' : ''}`
+    const className = `${theme === 'dark' ? 'invert' : ''}`
 
     if (text.length > 6) {
         if (text.length > 8) {

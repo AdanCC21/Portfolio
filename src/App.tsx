@@ -19,9 +19,9 @@ function App() {
       <Header homeRef={homeRef} skillsRef={skillsRef} projectsRef={projectsRef} achivementRef={achivementRef} aboutRef={aboutRef} />
       <main className="flex flex-col gap-y-8">
         <Home pageRef={homeRef} />
+        <Achievements pageRef={achivementRef}/>
         <Projects pageRef={projectsRef} />
         <Skills pageRef={skillsRef} />
-        <Achievements pageRef={achivementRef}/>
         <About pageRef={aboutRef} />
       </main>
       <Footer />
