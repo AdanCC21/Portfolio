@@ -30,11 +30,12 @@ export default function Home({ pageRef }: Prompts) {
 
           <motion.div variants={listUpItemAnimations}
             className="relative w-fit">
+            <img src="draws/Celular.webp" className="absolute top-0 left-0 -translate-1/2 h-8 md:h-12 -z-1" />
             <h2 className="text-5xl md:text-6xl">{t.global.name}</h2>
           </motion.div>
 
           <motion.div variants={listUpItemAnimations} className="relative">
-            <h5 className="relative text-2xl">
+            <h5 className="relative text-2xl w-fit">
               {t.global.profession}
             </h5>
           </motion.div>

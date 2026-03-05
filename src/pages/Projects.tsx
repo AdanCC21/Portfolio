@@ -37,7 +37,14 @@ export default function Projects({ pageRef }: Prompts) {
             whileInView="show"
             viewport={viewPortAnimation}
             className="flex flex-col py-[5%] pagePadding md:h-screen">
-            <h3 className="text-4xl font-bold mb-4">{t.projects.title}</h3>
+
+            <div className="flex gap-x-4">
+                <h3 className="text-4xl font-bold mb-4">
+                    {t.projects.title}
+                </h3>
+                <img src="draws/Cafe.webp" className="h-8 md:h-10 " alt="decoration" />
+            </div>
+
             <motion.ul variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}
                 className="flex flex-nowrap h-14 md:h-8 w-full items-end border-b-2 border-c-inverted mb-4 overflow-x-auto overflow-y-hidden">
                 {projects.map((current) => (

@@ -37,9 +37,9 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
         </button>
         <ul className='flex gap-x-4 '>
           <HeaderItem theme={theme} text={t.header.home} onClick={() => { goTo(homeRef) }} />
+          <HeaderItem theme={theme} text={t.header.achivement} onClick={() => { goTo(achivementRef) }} />
           <HeaderItem theme={theme} text={t.header.projects} onClick={() => { goTo(projectsRef) }} />
           <HeaderItem theme={theme} text={t.header.skills} onClick={() => { goTo(skillsRef) }} />
-          <HeaderItem theme={theme} text={t.header.achivement} onClick={() => { goTo(achivementRef) }} />
           <HeaderItem theme={theme} text={t.header.aboutMe} onClick={() => { goTo(aboutRef) }} />
         </ul>
         <button className={`hover:scale-125 ${tailwindcssDuration}`}>
@@ -54,9 +54,9 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
           <div className='absolute flex gap-x-4 bg-c-bg border border-[#ccc] rounded-lg rounded-tl-none z-51'>
             <ul className='flex flex-col w-fit list-none'>
               <li><HeaderItem theme={theme} text={t.header.home} onClick={() => { goTo(homeRef) }} /></li>
-              <li><HeaderItem theme={theme} text={t.header.skills} onClick={() => { goTo(skillsRef) }} /></li>
-              <li><HeaderItem theme={theme} text={t.header.projects} onClick={() => { goTo(projectsRef) }} /></li>
               <li><HeaderItem theme={theme} text={t.header.achivement} onClick={() => { goTo(achivementRef) }} /></li>
+              <li><HeaderItem theme={theme} text={t.header.projects} onClick={() => { goTo(projectsRef) }} /></li>
+              <li><HeaderItem theme={theme} text={t.header.skills} onClick={() => { goTo(skillsRef) }} /></li>
               <li><HeaderItem theme={theme} text={t.header.aboutMe} onClick={() => { goTo(aboutRef) }} /></li>
             </ul>
           </div>

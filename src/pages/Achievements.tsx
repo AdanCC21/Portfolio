@@ -26,7 +26,13 @@ export default function Achievements({ pageRef }: Prompts) {
 
   return (
     <section ref={pageRef} className="flex flex-col pagePadding">
-      <motion.h3 variants={fadeInOutAnimation} initial="hidden" whileInView={'show'} viewport={viewPortAnimation} className="text-4xl mb-4">{t.achivement.title}</motion.h3>
+      <motion.div variants={fadeInOutAnimation} initial="hidden" whileInView={'show'} viewport={viewPortAnimation} className="flex gap-x-4">
+        <h3 className="text-4xl mb-4">
+          {t.achivement.title}
+        </h3>
+        <img src="draws/Laptop.webp" className="h-8 md:h-12" alt="decoration" />
+      </motion.div>
+
       <ul className="relative flex flex-col w-full justify-between list-none">
         {expList.map((current, index) => (
           <motion.li variants={listUpItemAnimations} initial="hidden" whileInView={"show"} viewport={{ amount: 1, once: true }}
