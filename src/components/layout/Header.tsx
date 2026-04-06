@@ -34,6 +34,8 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
         {/* <button className='group' onClick={() => { toggleTheme() }}>
           <img src={theme === 'dark' ? Dark : Light} className={`h-4 cursor-pointer group-hover:scale-125 ${tailwindcssDuration}`} />
         </button> */}
+        <a href='/CV_Adan_Gonzalez.pdf' download className={`fixed hover:scale-125 top-2 left-4 ${tailwindcssDuration} text-base font-medium cursor-pointer`}>cv</a>
+        
         <ul className='flex gap-x-4 '>
           <HeaderItem theme={theme} text={t.header.home} onClick={() => { goTo(homeRef) }} />
           <HeaderItem theme={theme} text={t.header.achivement} onClick={() => { goTo(achivementRef) }} />
