@@ -11,8 +11,7 @@ export const ThemeContext = createContext<ThemeContextType | undefined>(undefine
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const [theme, setTheme] = useState<ThemeType>(() => {
-        const stored = localStorage.getItem("theme");
-        return (stored === "light" || stored === "dark") ? stored : "dark";
+        return "dark";
     });
 
     const toggleTheme = () => {
@@ -20,7 +19,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     };
 
     useEffect(() => {
-        localStorage.setItem("theme", theme);
         document.documentElement.className = theme;
     }, [theme]);
 

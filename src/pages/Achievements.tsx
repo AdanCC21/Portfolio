@@ -6,12 +6,10 @@ import { getDate } from "@/scripts/date";
 import { getExperience, type ExperienceItem } from "@/scripts/experience";
 import { motion } from "framer-motion";
 import { useState, useEffect, type RefObject } from "react";
-import Line from '@/assets/decoration/itemLargeBottom.svg'
 
 interface Prompts {
   pageRef: RefObject<any>
 }
-
 
 export default function Achievements({ pageRef }: Prompts) {
   const { t } = useLanguage();
@@ -26,7 +24,7 @@ export default function Achievements({ pageRef }: Prompts) {
   }, [t])
 
   return (
-    <section ref={pageRef} className="flex flex-col pagePadding">
+    <section ref={pageRef} className="flex flex-col pagePadding @container">
       <motion.div variants={fadeInOutAnimation} initial="hidden" whileInView={'show'} viewport={viewPortAnimation} className="flex gap-x-4">
         <h3 className="text-4xl mb-4">
           {t.achivement.title}
@@ -34,23 +32,38 @@ export default function Achievements({ pageRef }: Prompts) {
         <img src="draws/Laptop.webp" className="h-8 md:h-12" alt="decoration" />
       </motion.div>
 
-      <ul className="relative grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+      <ul className="relative grid @min-[900px]:grid-cols-3 @min-[400px]:grid-cols-2 @max-[399px]:grid-cols-1">
         {expList.map((current: ExperienceItem) => (
           <motion.li variants={listUpItemAnimations} initial="hidden" whileInView={"show"} viewport={{ amount: 1, once: true }}
             className={`flex flex-col p-2`}>
-            <img src={current.images[0]} className="w-full aspect-square overflow-hidden object-cover rounded-xl" />
-            <h5 className="text-xl text-center">{current.title}</h5>
+            <button onClick={() => { setExp(current); showModal(prev => !prev) }} className="cursor-pointer">
+              <img src={current.images[0]} className="w-full aspect-video overflow-hidden object-cover rounded-xl" />
+              <h5 className="text-xl text-center">{current.title}</h5>
+            </button>
           </motion.li>
         ))}
       </ul>
 
-      <Modal state={modalState} setState={showModal} title={currentExp?.title || 'Proyecto'}>
+      <Modal state={modalState} setState={showModal} title={currentExp?.title || 'Proyecto'} icon={currentExp?.icon}>
         <>
           {currentExp ?
-            <div className="flex flex-col h-full">
-              <span className="text-sm text-[#828282]">{getDate(new Date(currentExp.date.year, currentExp.date.month + 1, currentExp.date.day))}</span>
+            <div className="flex flex-col h-full justify-between">
+              <ul className="flex gap-4 justify-between my-2">
+                <li className="flex flex-col">
+                  <span className="text-lg">{t.achivement.date}</span>
+                  <span className="text-sm text-[#828282]">{getDate(new Date(currentExp.date.year, currentExp.date.month + 1, currentExp.date.day))}</span>
+                </li>
+                <li className="flex flex-col">
+                  <span className="text-lg">Rol:</span>
+                  <span className="text-sm text-[#828282]">{currentExp.rol}</span>
+                </li>
+                <li className="flex flex-col">
+                  <span className="text-lg">{t.achivement.location}</span>
+                  <span className="text-sm text-[#828282]">{currentExp.location}</span>
+                </li>
+              </ul>
 
-              <p className="text-base whitespace-break-spaces" >{currentExp.description}</p>
+              <p className="text-base whitespace-break-spaces mb-4" >{currentExp.description}</p>
 
               <div className="flex h-[30vh] items-center justify-center mt-4">
                 <Carrusel images={currentExp.images} />

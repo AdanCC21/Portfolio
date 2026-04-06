@@ -38,9 +38,13 @@
   },
   "achivement": {
     "title": "Experience",
+    "date":"Date",
+    "location":"Location",
     "achivementsList": [
       {
         "title": "TalentLand",
+        "rol": "Frontend",
+        "location": "Guadalajara Jalisco",
         "date": {
           "day": 21,
           "month": 3,
@@ -50,6 +54,8 @@
       },
       {
         "title": "Nasa Space APP Challenge",
+        "rol": "Frontend",
+        "location": "Ensenada B.C.",
         "date": {
           "day": 4,
           "month": 9,
@@ -59,12 +65,14 @@
       },
       {
         "title": "Becario",
+        "rol": "Full Stack",
+        "location": "Ensenada B.C.",
         "date": {
           "day": 29,
           "month": 8,
           "year": 2025
         },
-        "description": "I developed a test management system for project tracking. I participated in the database design, user interface design, and both frontend and backend development. The project was developed using React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak."
+        "description": "I developed a test management system for project tracking. I participated in the database design, user interface design, and both frontend and backend development. The project was developed using React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak. If you need more details about this project, you can send me a message and we can talk"
       }
     ],
     "viewMore": "View More"
