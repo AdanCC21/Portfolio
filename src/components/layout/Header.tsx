@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import Dark from '@/assets/icons/dark.svg'
-import Light from '@/assets/icons/light.svg'
+
 import Menu from '@/assets/icons/menu.svg';
 import ItemMediumBottom from '@/assets/decoration/itemMediumBottom.svg'
 
@@ -19,7 +18,7 @@ interface Prompts {
 
 export default function Header({ homeRef, skillsRef, projectsRef, achivementRef, aboutRef }: Prompts) {
   const { t, lang, setLang } = useLanguage();
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const [viewMenu, showMenu] = useState(false);
 
   const goTo = (ref: React.RefObject<any>) => {
