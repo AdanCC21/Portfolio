@@ -39,7 +39,7 @@ export const skillsList: Tool[] = [
     },
     {
         image: { src: Mongo, alt: 'Mongo' },
-        name: 'Mongo',
+        name: 'MongoDB',
     },
     {
         image: { src: Js, alt: 'JavaScript' },
