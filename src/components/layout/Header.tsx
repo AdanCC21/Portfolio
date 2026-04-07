@@ -31,11 +31,7 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
   return (
     <nav className='fixed flex bg-c-bg h-[6vh] w-full justify-between items-center md:justify-start px-[4%] z-50'>
       <div className='hidden md:flex items-center justify-center h-full w-full z-50'>
-        {/* <button className='group' onClick={() => { toggleTheme() }}>
-          <img src={theme === 'dark' ? Dark : Light} className={`h-4 cursor-pointer group-hover:scale-125 ${tailwindcssDuration}`} />
-        </button> */}
         <a href='/CV_Adan_Gonzalez.pdf' download className={`fixed hover:scale-125 top-2 left-4 ${tailwindcssDuration} text-base font-medium cursor-pointer`}>cv</a>
-        
         <ul className='flex gap-x-4 '>
           <HeaderItem theme={theme} text={t.header.home} onClick={() => { goTo(homeRef) }} />
           <HeaderItem theme={theme} text={t.header.achivement} onClick={() => { goTo(achivementRef) }} />
@@ -66,7 +62,6 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
       <div className='md:hidden flex h-full gap-x-4 items-center'>
         <span className='text-base font-medium cursor-pointer'
           onClick={() => { setLang() }} >{lang === 'es' ? 'es' : 'en'}</span>
-        {/* <img src={theme === 'dark' ? Dark : Light} className='md:hidden h-4 cursor-pointer ' onClick={() => { toggleTheme() }} /> */}
       </div>
       {viewMenu &&
         <div onClick={() => { showMenu(false) }} className='fixed w-screen h-screen'></div>

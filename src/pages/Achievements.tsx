@@ -1,11 +1,12 @@
 import Carrusel from "@/components/Carrusel";
 import Modal from "@/components/Modal";
-import { fadeInOutAnimation, listUpItemAnimations, viewPortAnimation } from "@/constants/animations";
+import { fadeInOutAnimation, listUpItemAnimations, tailwindcssDuration, viewPortAnimation } from "@/constants/animations";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getDate } from "@/scripts/date";
 import { getExperience, type ExperienceItem } from "@/scripts/experience";
 import { motion } from "framer-motion";
 import { useState, useEffect, type RefObject } from "react";
+import LargeLineBottom from '@/assets/decoration/itemLargeBottom.svg'
 
 interface Prompts {
   pageRef: RefObject<any>
@@ -36,9 +37,10 @@ export default function Achievements({ pageRef }: Prompts) {
         {expList.map((current: ExperienceItem) => (
           <motion.li variants={listUpItemAnimations} initial="hidden" whileInView={"show"} viewport={{ amount: 1, once: true }}
             className={`flex flex-col p-2`}>
-            <button onClick={() => { setExp(current); showModal(prev => !prev) }} className="cursor-pointer">
-              <img src={current.images[0]} className="w-full aspect-video overflow-hidden object-cover rounded-xl" />
+            <button onClick={() => { setExp(current); showModal(prev => !prev) }} className={`hover:scale-103 group cursor-pointer ${tailwindcssDuration}`}>
+              <img src={current.images[0]} className='w-full aspect-video overflow-hidden object-cover rounded-xl' />
               <h5 className="text-xl text-center">{current.title}</h5>
+              <img src={LargeLineBottom} alt="line" className={`opacity-0 translate-y-1 group-hover:translate-y-0 group-hover:opacity-100 invert mx-auto ${tailwindcssDuration}`} />
             </button>
           </motion.li>
         ))}
