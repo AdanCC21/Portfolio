@@ -24,7 +24,7 @@ const actOne: ProjectItem = {
 }
 
 const wolfForest: ProjectItem = {
-    title: "Wolf Forest", code: 'https://github.com/AdanCC21/WolfForestTs.git', page: '', imagesFolder: 'wolfForest', tools: [
+    title: "Wolf Forest", code: 'https://github.com/AdanCC21/WolfForestTs.git', page: 'https://wolf-forest-ts.vercel.app/', imagesFolder: 'wolfForest', tools: [
         { image: { src: Ts, alt: "typescript" }, name: "TypeScript" },
         { image: { src: React, alt: "React" }, name: "React" },
         { image: { src: Tailwindcss, alt: "Tailwindcss" }, name: "Tailwindcss" },
