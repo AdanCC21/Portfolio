@@ -2,7 +2,7 @@ import { useLanguage } from "@/hooks/useLanguage"
 import { useEffect, useState, type RefObject } from "react";
 import type { Project } from "@/entities/project.entity";
 import { getProjects } from "@/scripts/projects";
-import { listUpContainerAnimations, listUpItemAnimations, pageContainerAnimation, viewPortAnimation } from "@/constants/animations";
+import { listUpContainerAnimations, listUpItemAnimations, pageContainerAnimation, tailwindcssDuration, viewPortAnimation } from "@/constants/animations";
 import { AnimatePresence, motion } from "framer-motion";
 import SkillItem from "@/components/SkillItem";
 import Carrusel from "@/components/Carrusel";
@@ -11,7 +11,6 @@ import { useTheme } from "@/hooks/useTheme";
 interface Prompts {
     pageRef: RefObject<any>
 }
-
 
 export default function Projects({ pageRef }: Prompts) {
     const { t } = useLanguage();
@@ -50,8 +49,9 @@ export default function Projects({ pageRef }: Prompts) {
                 {projects.map((current) => (
                     <motion.li variants={listUpItemAnimations}
                         key={current.title}
-                        className={`${current.title === currentProject.title ? 'h-full bg-[#191919]' : 'h-6/10 bg-[#555] hover:h-8/10 duration-125 hover:bg-[#333]'} flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl`}
+                        className={`${current.title === currentProject.title ? 'h-full bg-[#191919]' : 'h-6/10 bg-[#555] hover:h-8/10 duration-125 hover:bg-[#333]'} flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl gap-2`}
                         onClick={() => { setCurrentProject(current) }}>
+                        <img src="/examples/tickets.svg" alt="icon" className={`${current.title === currentProject.title ? 'h-4':'h-2'} group-hover:h-4 ${tailwindcssDuration}`} />
                         <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} whitespace-nowrap text-white text-base`}>{current.title}</span>
                     </motion.li>
                 ))}
