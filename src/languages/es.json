@@ -23,8 +23,7 @@
       },
       {
         "title": "Gestión de Pruebas",
-        "description": "Este proyecto actualmente es clasificado, pero fue solicitado por el Departamento de Desarrollo de Software de la UABC. Me encargué de llevar a cabo el diseño de la base de datos, desarrollo de código y los diseños iniciales del sistema. Si necesitas más información sobre este proyecto, envíame un correo y podemos hablar.",
-        "myRol": "Diseñador, Full Stack."
+        "description": "Este proyecto actualmente es clasificado, pero fue solicitado por el Departamento de Desarrollo de Software de la UABC. Me encargué de llevar a cabo el diseño de la base de datos, desarrollo de código y los diseños iniciales del sistema."
       },
       {
         "title": "Wolf Forest",
@@ -72,7 +71,7 @@
           "month": 8,
           "year": 2025
         },
-        "description": "Desarrollé un sistema gestor de pruebas para el seguimiento de proyeecto. Participé en el diseño de la base de datos, la interfaz de usuario y el desarrollo frontend y backend. El proyecto fue desarrollado utilizando React + Vite, NestJS, Prisma, Figma, Lucidchart y Keycloak. Si necesitas más información sobre este proyecto, envíame un correo y podemos hablar."
+        "description": "Desarrollé un sistema gestor de pruebas para el seguimiento de proyeecto. Participé en el diseño de la base de datos, la interfaz de usuario y el desarrollo frontend y backend. El proyecto fue desarrollado utilizando React + Vite, NestJS, Prisma, Figma, Lucidchart y Keycloak."
       }
     ],
     "viewMore": "Ver Más"

@@ -23,7 +23,7 @@
       },
       {
         "title": "Gestión de Pruebas",
-        "description": "This project is currently classified, but it was requested by the UABC Software Development Department. I was responsible for the database design, code development, and the initial system designs. If you need more information about this project, send me an email and we can talk.",
+        "description": "This project is currently classified, but it was requested by the UABC Software Development Department. I was responsible for the database design, code development, and the initial system designs.",
         "myRol": "Designer, Full Stack."
       },
       {
@@ -72,7 +72,7 @@
           "month": 8,
           "year": 2025
         },
-        "description": "I developed a test management system for project tracking. I participated in the database design, user interface design, and both frontend and backend development. The project was developed using React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak. If you need more details about this project, you can send me a message and we can talk"
+        "description": "I developed a test management system for project tracking. I participated in the database design, user interface design, and both frontend and backend development. The project was developed using React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak."
       }
     ],
     "viewMore": "View More"
