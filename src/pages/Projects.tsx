@@ -51,7 +51,9 @@ export default function Projects({ pageRef }: Prompts) {
                         key={current.title}
                         className={`${current.title === currentProject.title ? 'h-full bg-[#191919]' : 'h-6/10 bg-[#555] hover:h-8/10 duration-125 hover:bg-[#333]'} flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl gap-2`}
                         onClick={() => { setCurrentProject(current) }}>
-                        <img src="/examples/tickets.svg" alt="icon" className={`${current.title === currentProject.title ? 'h-4':'h-2'} group-hover:h-4 ${tailwindcssDuration}`} />
+                        
+                        <img src={current.icon} alt={current.iconAlt} className={`${current.title === currentProject.title ? 'h-4':'h-2'} group-hover:h-4 ${tailwindcssDuration}`} />
+                        
                         <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} whitespace-nowrap text-white text-base`}>{current.title}</span>
                     </motion.li>
                 ))}

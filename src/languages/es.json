@@ -18,16 +18,22 @@
     "projectslist": [
       {
         "title": "Act One",
+        "icon":"/draws/Cafe.webp",
+        "iconAlt":"i don't have an icon for this project jeje",
         "description": "Una red social diseñada para compartir historias y chismes, donde los usuarios pueden compartir sus anécdotas en un formato dividido por actos. La plataforma también incluye un modo de concentración para creadores de contenido, que permite leer las historias párrafo por párrafo, eliminando distracciones y ofreciendo una experiencia más inmersiva.",
         "myRol": "Analista, Diseñador, Full Stack."
       },
       {
         "title": "Gestión de Pruebas",
+        "icon":"/examples/tickets.svg",
+        "iconAlt":"UABC logo",
         "description": "Este proyecto actualmente es clasificado, pero fue solicitado por el Departamento de Desarrollo de Software de la UABC. Me encargué de llevar a cabo el diseño de la base de datos, desarrollo de código y los diseños iniciales del sistema.",
         "myRol": "Diseñador, Full Stack."
       },
       {
         "title": "Wolf Forest",
+        "icon":"/examples/wolfForest.svg",
+        "iconAlt":"Wolf Forest logo",
         "description": "Es un sitio web donde puedes mejorar tus personajes ficticios para enfrentarlos en una batalla campal. Conforme vas jugando, se producen eventos especiales como muertes, asesinatos, alianzas temporales y recolección de objetos, creando una narrativa dinámica y aleatoria.",
         "myRol": "Diseñador, Full Stack."
       }

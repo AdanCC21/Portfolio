@@ -8,9 +8,13 @@ export interface ProjectDetails {
 
 export interface Project extends ProjectDetails {
     title: string,
+    icon?: string
+    iconAlt?: string
+    iconClass?: string
+    
     description: string,
-    myRol:string
-    images:string[]
+    myRol: string
+    images: string[]
 }
 
 export type SkillLevel = 'high' | 'avarage' | 'low';
