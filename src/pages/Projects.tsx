@@ -35,7 +35,9 @@ export default function Projects({ pageRef }: Prompts) {
             initial="hidden"
             whileInView="show"
             viewport={viewPortAnimation}
-            className="flex flex-col py-[5%] pagePadding md:h-screen">
+            className="relative flex flex-col py-[5%] pagePadding md:h-screen">
+            
+            <img src="/draws/thinking.webp" alt="decoration" className="absolute top-10 right-40 h-15  opacity-10 z-100" />
 
             <div className="flex gap-x-4">
                 <h3 className="text-4xl font-bold mb-4">
@@ -51,7 +53,7 @@ export default function Projects({ pageRef }: Prompts) {
                         key={current.title}
                         className={`${current.title === currentProject.title ? 'h-full bg-[#191919]' : 'h-6/10 bg-[#555] hover:h-8/10 duration-125 hover:bg-[#333]'} flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl gap-2`}
                         onClick={() => { setCurrentProject(current) }}>
-                        <img src="/examples/tickets.svg" alt="icon" className={`${current.title === currentProject.title ? 'h-4':'h-2'} group-hover:h-4 ${tailwindcssDuration}`} />
+                        <img src="/examples/tickets.svg" alt="icon" className={`${current.title === currentProject.title ? 'h-4' : 'h-2'} group-hover:h-4 ${tailwindcssDuration}`} />
                         <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} whitespace-nowrap text-white text-base`}>{current.title}</span>
                     </motion.li>
                 ))}

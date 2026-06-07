@@ -14,7 +14,11 @@ export default function Home({ pageRef }: Prompts) {
   const { theme } = useTheme();
   return (
     <section ref={pageRef}
-      className='flex w-screen h-screen items-center justify-center pagePadding'>
+      className='relative flex w-screen h-screen items-center justify-center pagePadding'>
+      {/* <img src="/draws/reading.webp" alt="decoration" className="absolute -bottom-5 left-0 size-10 md:size-20 rotate-30 opacity-10 z-100" /> */}
+      <img src="/draws/Cafe.webp" alt="decoration" className="absolute bottom-25 right-40 h-10 w-fit md:h-15 -rotate-20 opacity-10 z-100" />
+      <img src="/draws/wolf.webp" alt="decoration" className="absolute top-30 left-30 h-6 w-fit md:h-10 -rotate-20 opacity-10 z-100" />
+
       <div className="flex flex-col md:flex-row md:items-center md:justify-start justify-center w-full h-full md:h-6/10">
         <motion.div
           variants={baseAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation}

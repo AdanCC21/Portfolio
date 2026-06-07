@@ -7,7 +7,7 @@
     "home": "Home",
     "skills": "Skills",
     "projects": "Projects",
-    "achivement": "Experience",
+    "achivement": "Achivements",
     "aboutMe": "About Me"
   },
   "skills": {
@@ -37,7 +37,7 @@
     "goTo": "View"
   },
   "achivement": {
-    "title": "Experience",
+    "title": "Achivements",
     "date":"Date",
     "location":"Location",
     "achivementsList": [

@@ -7,7 +7,7 @@
     "home": "Inicio",
     "skills": "Habilidades",
     "projects": "Proyectos",
-    "achivement": "Experiencia",
+    "achivement": "Logros",
     "aboutMe": "Sobre mí"
   },
   "skills": {
@@ -37,7 +37,7 @@
     "goTo": "Ver"
   },
   "achivement": {
-    "title": "Experiencia",
+    "title": "Logros",
     "date":"Fecha",
     "location":"Ubicación",
     "achivementsList": [
