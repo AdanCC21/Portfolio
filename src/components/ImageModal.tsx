@@ -38,7 +38,7 @@ export default function ImageModal({ state, setState, images, currentIndex = 0 }
     return (
         <AnimatePresence mode="wait">
             {state &&
-                <motion.div variants={fastUpAnimation} initial="hidden" animate="show" exit="out" className="fixed top-0 left-0 flex justify-between w-screen h-screen bg-black/60 px-[5%] backdrop-blur-sm z-100" onClick={() => { setState(false); }}>
+                <motion.div variants={fastUpAnimation} initial="hidden" animate="show" exit="out" className="fixed top-0 left-0 flex justify-between w-screen h-screen bg-black/60 px-[5%] backdrop-blur-sm z-500" onClick={() => { setState(false); }}>
                     <motion.button initial={{ scale: 1 }} whileHover={{ scale: 1.3 }} className="absolute right-12 top-6 cursor-pointer p-2 rounded-lg" onClick={() => { setState(false) }}>
                         <span className="text-xl">X</span>
                     </motion.button>
