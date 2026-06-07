@@ -16,8 +16,8 @@ export default function Home({ pageRef }: Prompts) {
     <section ref={pageRef}
       className='relative flex w-screen h-screen items-center justify-center pagePadding'>
 
-      <img src="/draws/Cafe.webp" alt="decoration" className="absolute md:hidden top-15 right-1/10 h-10 w-fit md:h-15 -rotate-20 opacity-20 z-100" />
-      <img src="/draws/Cafe.webp" alt="decoration" className="absolute hidden md:block md:bottom-25 right-1/10 h-10 w-fit md:h-15 -rotate-20 z-100" />
+      
+      <img src="/draws/Cafe.webp" alt="decoration" className="absolute hidden md:block md:bottom-25 right-1/10 h-10 w-fit md:h-15 opacity-20 -rotate-20 z-100" />
       
       <img src="/draws/wolf.webp" alt="decoration" className="absolute top-30 left-1/10 h-10 w-fit md:h-10 -rotate-20 opacity-20 z-100" />
 
