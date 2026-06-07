@@ -19,7 +19,7 @@ export default function Home({ pageRef }: Prompts) {
       
       <img src="/draws/Cafe.webp" alt="decoration" className="absolute hidden md:block md:bottom-25 right-1/10 h-10 w-fit md:h-15 opacity-20 -rotate-20 z-100" />
       
-      <img src="/draws/wolf.webp" alt="decoration" className="absolute top-30 left-1/10 h-10 w-fit md:h-10 -rotate-20 opacity-20 z-100" />
+      <img src="/draws/wolf.webp" alt="decoration" className="absolute top-30 left-1/10 h-10 w-10 -rotate-20 opacity-20 z-100" />
 
       <div className="flex flex-col md:flex-row md:items-center md:justify-start justify-center w-full h-full md:h-6/10">
         <motion.div
