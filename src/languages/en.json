@@ -17,17 +17,30 @@
     "title": "Projects",
     "projectslist": [
       {
+        "title": "Cibershield",
+        "icon": "/examples/armadillo.webp",
+        "iconAlt": "Cibershield logo",
+        "description": "Educational web platform focused on cybersecurity that offers information on threats such as phishing and malware, as well as interactive exercises to identify phishing attempts by analyzing emails.",
+        "myRol": "Designer, Frontend."
+      },
+      {
         "title": "Act One",
+        "icon": "/draws/Cafe.webp",
+        "iconAlt": "i don't have an icon for this project jeje",
         "description": "A social network designed to share stories and gossip, where users can share their anecdotes in a format divided into acts. The platform also includes a focus mode for content creators, allowing stories to be read paragraph by paragraph, removing distractions and providing a more immersive experience.",
         "myRol": "Analyst, Designer, Full Stack."
       },
       {
         "title": "Gestión de Pruebas",
-        "description": "This project is currently classified, but it was requested by the UABC Software Development Department. I was responsible for the database design, code development, and the initial system designs. If you need more information about this project, send me an email and we can talk.",
+        "icon": "/examples/tickets.svg",
+        "iconAlt": "UABC logo",
+        "description": "This project is currently classified, but it was requested by the UABC Software Development Department. I was responsible for the database design, code development, and the initial system designs.",
         "myRol": "Designer, Full Stack."
       },
       {
         "title": "Wolf Forest",
+        "icon": "/examples/wolfForest.svg",
+        "iconAlt": "Wolf Forest logo",
         "description": "It is a website where you can improve your fictional characters to face them in a battle royale. As you keep playing, special events occur such as deaths, murders, temporary alliances, and item collection, creating a dynamic and random narrative.",
         "myRol": "Designer, Full Stack."
       }
@@ -38,8 +51,8 @@
   },
   "achivement": {
     "title": "Achivements",
-    "date":"Date",
-    "location":"Location",
+    "date": "Date",
+    "location": "Location",
     "achivementsList": [
       {
         "title": "TalentLand",
@@ -55,7 +68,7 @@
       {
         "title": "Nasa Space APP Challenge",
         "rol": "Frontend",
-        "location": "Ensenada B.C.",
+        "location": "Ensenada B.C. México",
         "date": {
           "day": 4,
           "month": 9,
@@ -64,15 +77,15 @@
         "description": "On October 4 and 5, 2025, I participated in the NASA Space Apps Challenge with my team. We developed a weather application idea that provides recommendations based on the user's plans and weather conditions. Although we did not obtain a winning place, the experience was very enriching."
       },
       {
-        "title": "Becario",
+        "title": "Scholar",
         "rol": "Full Stack",
-        "location": "Ensenada B.C.",
+        "location": "Ensenada B.C. México",
         "date": {
           "day": 29,
           "month": 8,
           "year": 2025
         },
-        "description": "I developed a test management system for project tracking. I participated in the database design, user interface design, and both frontend and backend development. The project was developed using React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak. If you need more details about this project, you can send me a message and we can talk"
+        "description": "I developed a test management system for project tracking. I participated in the database design, user interface design, and both frontend and backend development. The project was developed using React + Vite, NestJS, Prisma, Figma, Lucidchart, and Keycloak."
       }
     ],
     "viewMore": "View More"

@@ -18,7 +18,8 @@ export default function About({ pageRef }: Prompts) {
     const { theme } = useTheme();
 
     return (
-        <section ref={pageRef} className='flex md:flex-row flex-col gap-x-8 py-[5%] min-h-[80vh] pagePadding'>
+        <section ref={pageRef} className='relative flex md:flex-row flex-col gap-x-8 py-[5%] min-h-[80vh] pagePadding'>
+            <img src="/draws/corvete.webp" alt="decoration" className="absolute bottom-5 left-1/10 h-15  scale-x-[-1] opacity-10 md:opacity-20 z-100" />
             <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='flex flex-col flex-2 justify-center'>
                 <motion.div variants={listUpItemAnimations} className='flex gap-x-4'>
                     <h3 className='text-4xl font-bold mb-4'>{t.aboutMe.title}</h3>
@@ -52,7 +53,7 @@ export default function About({ pageRef }: Prompts) {
 
             <motion.div variants={listUpContainerAnimations} initial="hidden" whileInView="show" viewport={viewPortAnimation} className='hidden relative md:flex flex-1 items-center'>
                 <motion.div variants={listUpItemAnimations} className='relative w-fit h-fit'>
-                    <img alt='yo' src='yo.webp' className='rounded-full ' />
+                    <img alt='yo' src='yo.webp' className='rounded-full aspect-square object-cover' />
                     <img alt='draw' src='draws/Music2.webp' className='absolute h-16 sm:h-12 right-0 bottom-0 ' />
                 </motion.div>
             </motion.div>

@@ -35,7 +35,7 @@ export default function Modal({ state, setState, children, title, icon, onClose 
         <AnimatePresence mode="wait">
             {state &&
                 <motion.div variants={fadeInOutAnimation} initial="hidden" animate="show" exit={"out"}
-                    className="fixed top-0 left-0 z-100 flex justify-center py-8 md:py-2 w-screen h-screen bg-black/50 overflow-y-scroll" onClick={() => { setState(false) }}>
+                    className="fixed top-0 left-0 z-200 flex justify-center py-8 md:py-2 w-screen h-screen bg-black/50 overflow-y-scroll" onClick={() => { setState(false) }}>
 
                     <motion.div variants={showUp} initial="hidden" animate="show" className="flex flex-col rounded-xl bg-[#1f1f1f] w-8/10 lg:h-8/10 m-auto text-white overflow-y-auto lg:p-8 p-4" onClick={(e) => { e.stopPropagation(); }}>
                         <header className="flex justify-between rounded-t-xl mb-4 sm:mb-0">

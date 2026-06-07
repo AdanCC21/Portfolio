@@ -29,9 +29,9 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
   }
 
   return (
-    <nav className='fixed flex bg-c-bg h-[6vh] w-full justify-between items-center md:justify-start px-[4%] z-50'>
+    <nav className='fixed flex bg-c-bg h-[6vh] w-full justify-between items-center md:justify-start px-[4%] z-200'>
       <div className='hidden md:flex items-center justify-center h-full w-full z-50'>
-        <a href='/CV_Adan_Gonzalez.pdf' download className={`fixed hover:scale-125 top-2 left-4 ${tailwindcssDuration} text-base font-medium cursor-pointer`}>cv</a>
+        <a href={lang === 'es' ? '/CV_Adan_Gonzalez_spanish.pdf' : '/CV_Adan_Gonzalez_english.pdf'} download className={`fixed hover:scale-125 top-2 left-4 ${tailwindcssDuration} text-base font-medium cursor-pointer`}>cv</a>
         <ul className='flex gap-x-4 '>
           <HeaderItem theme={theme} text={t.header.home} onClick={() => { goTo(homeRef) }} />
           <HeaderItem theme={theme} text={t.header.achivement} onClick={() => { goTo(achivementRef) }} />
@@ -48,7 +48,7 @@ export default function Header({ homeRef, skillsRef, projectsRef, achivementRef,
       <div className='md:hidden relative cursor-pointer' onClick={() => { showMenu(prev => !prev) }}>
         <img src={Menu} alt='menu' className={`${theme !== 'dark' && 'invert'} `} />
         {viewMenu &&
-          <div className='absolute flex gap-x-4 bg-c-bg border border-[#ccc] rounded-lg rounded-tl-none z-51'>
+          <div className='absolute flex gap-x-4 bg-c-bg border border-[#ccc] rounded-lg rounded-tl-none z-201'>
             <ul className='flex flex-col w-fit list-none'>
               <li><HeaderItem theme={theme} text={t.header.home} onClick={() => { goTo(homeRef) }} /></li>
               <li><HeaderItem theme={theme} text={t.header.achivement} onClick={() => { goTo(achivementRef) }} /></li>

@@ -26,7 +26,7 @@ export default function Achievements({ pageRef }: Prompts) {
 
   return (
     <section ref={pageRef} className="relative flex flex-col pagePadding @container">
-      <img src="/draws/graduate.webp" alt="decoration" className="absolute bottom-5 right-30 h-12 -rotate-20 opacity-10 z-100" />
+      <img src="/draws/graduate.webp" alt="decoration" className="absolute bottom-5 right-1/10 h-12 -rotate-20 opacity-20 z-100" />
       <motion.div variants={fadeInOutAnimation} initial="hidden" whileInView={'show'} viewport={viewPortAnimation} className="flex gap-x-4">
         <h3 className="text-4xl mb-4">
           {t.achivement.title}

@@ -17,17 +17,30 @@
     "title": "Proyectos",
     "projectslist": [
       {
+        "title": "Cibershield",
+        "icon": "/examples/armadillo.webp",
+        "iconAlt": "Cibershield logo",
+        "description": "Plataforma web educativa enfocada en ciberseguridad que ofrece información sobre amenazas como phishing y malware, además de ejercicios interactivos para identificar intentos de phishing mediante el análisis de correos electrónicos.",
+        "myRol": "Diseñador, Frontend."
+      },
+      {
         "title": "Act One",
+        "icon": "/draws/Cafe.webp",
+        "iconAlt": "i don't have an icon for this project jeje",
         "description": "Una red social diseñada para compartir historias y chismes, donde los usuarios pueden compartir sus anécdotas en un formato dividido por actos. La plataforma también incluye un modo de concentración para creadores de contenido, que permite leer las historias párrafo por párrafo, eliminando distracciones y ofreciendo una experiencia más inmersiva.",
         "myRol": "Analista, Diseñador, Full Stack."
       },
       {
         "title": "Gestión de Pruebas",
-        "description": "Este proyecto actualmente es clasificado, pero fue solicitado por el Departamento de Desarrollo de Software de la UABC. Me encargué de llevar a cabo el diseño de la base de datos, desarrollo de código y los diseños iniciales del sistema. Si necesitas más información sobre este proyecto, envíame un correo y podemos hablar.",
+        "icon": "/examples/tickets.svg",
+        "iconAlt": "UABC logo",
+        "description": "Este proyecto actualmente es clasificado, pero fue solicitado por el Departamento de Desarrollo de Software de la UABC. Me encargué de llevar a cabo el diseño de la base de datos, desarrollo de código y los diseños iniciales del sistema.",
         "myRol": "Diseñador, Full Stack."
       },
       {
         "title": "Wolf Forest",
+        "icon": "/examples/wolfForest.svg",
+        "iconAlt": "Wolf Forest logo",
         "description": "Es un sitio web donde puedes mejorar tus personajes ficticios para enfrentarlos en una batalla campal. Conforme vas jugando, se producen eventos especiales como muertes, asesinatos, alianzas temporales y recolección de objetos, creando una narrativa dinámica y aleatoria.",
         "myRol": "Diseñador, Full Stack."
       }
@@ -38,13 +51,13 @@
   },
   "achivement": {
     "title": "Logros",
-    "date":"Fecha",
-    "location":"Ubicación",
+    "date": "Fecha",
+    "location": "Ubicación",
     "achivementsList": [
       {
         "title": "TalentLand",
         "rol": "Frontend",
-        "location":"Guadalajara Jalisco",
+        "location": "Guadalajara Jalisco",
         "date": {
           "day": 21,
           "month": 3,
@@ -55,7 +68,7 @@
       {
         "title": "Nasa Space APP Challenge",
         "rol": "Frontend",
-        "location":"Ensenada B.C.",
+        "location": "Ensenada B.C. México",
         "date": {
           "day": 4,
           "month": 9,
@@ -66,13 +79,13 @@
       {
         "title": "Becario",
         "rol": "Full Stack",
-        "location":"Ensenada B.C.",
+        "location": "Ensenada B.C. México",
         "date": {
           "day": 29,
           "month": 8,
           "year": 2025
         },
-        "description": "Desarrollé un sistema gestor de pruebas para el seguimiento de proyeecto. Participé en el diseño de la base de datos, la interfaz de usuario y el desarrollo frontend y backend. El proyecto fue desarrollado utilizando React + Vite, NestJS, Prisma, Figma, Lucidchart y Keycloak. Si necesitas más información sobre este proyecto, envíame un correo y podemos hablar."
+        "description": "Desarrollé un sistema gestor de pruebas para el seguimiento de proyeecto. Participé en el diseño de la base de datos, la interfaz de usuario y el desarrollo frontend y backend. El proyecto fue desarrollado utilizando React + Vite, NestJS, Prisma, Figma, Lucidchart y Keycloak."
       }
     ],
     "viewMore": "Ver Más"

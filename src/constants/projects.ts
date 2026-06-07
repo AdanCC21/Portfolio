@@ -42,5 +42,13 @@ const gestionPruebas: ProjectItem = {
     ]
 }
 
+const ciberShield: ProjectItem = {
+    title: "Cibershield", code: '', page: 'https://cibershield-mu.vercel.app/', imagesFolder: 'cibershield', tools: [
+        { image: { src: Ts, alt: "typescript" }, name: "TypeScript" },
+        { image: { src: React, alt: "React" }, name: "React" },
+        { image: { src: Tailwindcss, alt: "Tailwindcss" }, name: "Tailwindcss" },
+    ]
+}
 
-export const detailsProjects = [actOne, wolfForest, gestionPruebas];
+
+export const detailsProjects = [actOne, ciberShield, wolfForest, gestionPruebas];

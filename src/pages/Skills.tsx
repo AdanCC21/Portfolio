@@ -24,7 +24,10 @@ export default function Skills({ pageRef }: Prompts) {
             initial="hidden"
             whileInView="show"
             viewport={viewPortAnimation}
-            className="flex flex-col min-h-[50vh] py-[5%] pagePadding">
+            className="relative flex flex-col min-h-[50vh] py-[5%] pagePadding">
+            
+            <img src="/draws/reading.webp" alt="decoration" className="absolute bottom-10 right-1/10 h-15 opacity-20 z-100" />
+
             <div className="flex gap-x-4">
                 <h3 className="text-4xl font-semibold mb-2">
                     {t.skills.title}

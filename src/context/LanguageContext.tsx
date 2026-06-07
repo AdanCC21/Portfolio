@@ -4,12 +4,14 @@ import type { LanguageType } from '@/entities/language.entity'
 import es from '@/languages/es.json'
 import en from '@/languages/en.json'
 
-const translations = { es, en }
+type TranslationType = typeof es | typeof en
+
+const translations: Record<LanguageType, TranslationType> = { es, en }
 
 type LanguageContextType = {
     lang: LanguageType
     setLang: () => void
-    t: typeof es
+    t: TranslationType
 }
 
 export const LanguageContext = createContext<LanguageContextType | null>(null)

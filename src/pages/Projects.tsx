@@ -16,17 +16,17 @@ export default function Projects({ pageRef }: Prompts) {
     const { t } = useLanguage();
     const { theme } = useTheme();
 
-    useEffect(() => {
-        const projects = getProjects(t);
-        setProjectsList(projects);
-        setCurrentProject(prev => {
-            let project = projects.find(prj => prj.imagesFolder === prev.imagesFolder);
-            return project ? project : projects[0];
-        })
-    }, [t])
-
     const [projects, setProjectsList] = useState<Project[]>(getProjects(t))
     const [currentProject, setCurrentProject] = useState<Project>(projects[0])
+
+    useEffect(() => {
+        const proj = getProjects(t);
+        setProjectsList(proj);
+        setCurrentProject(prev => {
+            let project = proj.find(prj => prj.imagesFolder === prev.imagesFolder);
+            return project ? project : proj[0];
+        })
+    }, [t])
 
     return (
         <motion.section
@@ -37,7 +37,8 @@ export default function Projects({ pageRef }: Prompts) {
             viewport={viewPortAnimation}
             className="relative flex flex-col py-[5%] pagePadding md:h-screen">
             
-            <img src="/draws/thinking.webp" alt="decoration" className="absolute top-10 right-40 h-15  opacity-10 z-100" />
+            <img src="/draws/thinking.webp" alt="decoration" className="absolute md:hidden bottom-0 left-1/10 h-10 opacity-20 z-100" />
+            <img src="/draws/thinking.webp" alt="decoration" className="hidden md:block absolute top-10 right-1/10 h-15 opacity-20 z-100" />
 
             <div className="flex gap-x-4">
                 <h3 className="text-4xl font-bold mb-4">
@@ -53,7 +54,9 @@ export default function Projects({ pageRef }: Prompts) {
                         key={current.title}
                         className={`${current.title === currentProject.title ? 'h-full bg-[#191919]' : 'h-6/10 bg-[#555] hover:h-8/10 duration-125 hover:bg-[#333]'} flex items-center justify-center px-4 py-1 cursor-pointer rounded-t-xl gap-2`}
                         onClick={() => { setCurrentProject(current) }}>
-                        <img src="/examples/tickets.svg" alt="icon" className={`${current.title === currentProject.title ? 'h-4' : 'h-2'} group-hover:h-4 ${tailwindcssDuration}`} />
+                        
+                        <img src={current.icon} alt={current.iconAlt} className={`${current.title === currentProject.title ? 'h-4':'h-2'} group-hover:h-4 ${tailwindcssDuration}`} />
+                        
                         <span className={`${current.title === currentProject.title ? 'font-bold' : 'opacity-60'} whitespace-nowrap text-white text-base`}>{current.title}</span>
                     </motion.li>
                 ))}

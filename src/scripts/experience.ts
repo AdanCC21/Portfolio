@@ -23,6 +23,7 @@ export function getExperience(t: any) {
 
     const experiences = jsonExperiences.map((current: ExperienceItem) => {
         let folder = current.title.toLowerCase();
+        if (folder === 'scholar') folder = 'becario'
         folder = folder.replaceAll(' ', '-')
 
         const images = entries
@@ -37,6 +38,9 @@ export function getExperience(t: any) {
                 current.icon = NasaIcon;
                 break;
             case "Becario":
+                current.icon = NoInfoIcon;
+                break;
+            case "Scholar":
                 current.icon = NoInfoIcon;
                 break;
             default:
